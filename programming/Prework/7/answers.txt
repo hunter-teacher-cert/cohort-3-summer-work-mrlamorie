@@ -1,0 +1,23 @@
+
+
+Prework 7 exercise 2:
+
+2.1
+method banana -
+This fxn takes the param a, and returns a number that is the total of all members
+of a multiplied.
+kiwi is the var that keep the total
+i is the counter for the while loop and the index accessor for a
+
+2.2
+method grapefruit -
+This fxn takes the params a and grape and checks a for an occurance of grape. If 
+grape is found, it returns the index of grape, otherwise it returns a -1.
+grape is the number to be searched for.
+
+2.3
+method pineapple -
+This fxn takes the params a and apple, and searches the array for occurances of the
+number apple. It returns the number of occurances of apple in a.
+apple is the number to be searched for.
+pear is the total number of occurances of apple in a.

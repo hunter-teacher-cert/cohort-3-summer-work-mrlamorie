@@ -1,0 +1,40 @@
+
+Prework 04:
+
+Exercise 1:
+if ((x > 0 ) && (x < 10) ){
+  System.out.println("positive single digit number.");
+}
+
+Exercise 2.1:
+based on the pre 03 work I feel like with these stack list you may want to see
+args [none] here, but the online book does not use that convetion. I will include
+it, but it is not totally clear. Mostly I found the stack diagram exercise for
+a program with no vars to be very confusing to me.
+
+main [ args [none]  ]
+     [ bizz [5]     ]
+     [ buzz [2]     ]  
+
+clink [ fork [4]  ]
+
+zoop [ fred ["breakfast "]  ]
+     [ bob  [4]          ]
+
+ping [ strangStrung ["not "] ]
+
+
+Exercise 2.2:
+The expected output is:
+just for
+any not more
+It's breakfast
+!
+
+Exercise 3:
+main [ args [none]  ]
+nLines [ n [4] ]  
+nLines [ n [3] ]  
+nLines [ n [2] ]  
+nLines [ n [1] ]
+nLines [ n [0] ]  

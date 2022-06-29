@@ -1,0 +1,33 @@
+
+Prework 03 
+Exercise 1:
+1.1:
+
+Expected output:
+No, I wug.
+You wugga wug.
+I wug.
+
+1.2:
+I am a bit confused by this. Stack diagrams show the state of variables, and there
+are none. Unless you want a Stack diagramin showing there is no value for args, which would be:
+
+main [ args  [none] ]
+
+If the question is asking for us to use the notation to show what the output of each function would be then it would be something like:
+
+zoop [wug. \nYou wugga wug.\n]
+main [No, I wug\nYou wugga wug\nI wug.\n]
+baffle [wug.\n]
+ping [.\n]
+
+1.3:
+I don't want to run that because it's a non-terminating recursive.
+But the output should be something like (assuming you made the modification and ran
+in place otherwise):
+No, I wug.
+wug.
+wug.
+wug.
+... forever, assuming replit doesn't have a too much recursion blocker.
+
