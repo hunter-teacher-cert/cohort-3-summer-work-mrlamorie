@@ -1,6 +1,6 @@
 * Last name: LaMorie
 * First name: William
-* Github username: mrlamorie & chrome242
+* Github username: mrlamorie
 
 * Instructions:
 
