@@ -17,7 +17,7 @@ facilitate play until human or AI wins, and announce winner
 
 public class Nim {
 
-  
+
   public static void main(String[] args){
 
     int stones = 12; // bag contains 12 stones initially    
@@ -30,8 +30,7 @@ public class Nim {
     while(stones > 0){
       System.out.println("There are currently " + stones + " stones left.");
       
-      // player move
-      
+      // player move //
       // prompt user for number of stones they wish to remove each turn
       System.out.print("How many stones (1-3) would you like to take? ");
       stonesTaken = input.nextInt();
@@ -40,24 +39,23 @@ public class Nim {
         stonesTaken = input.nextInt();
       }
       stones -= stonesTaken;
-
-      // check for a player win
-      if (stones <= 0) {
+      if (stones <= 0) { // check for a player win
         System.out.println("Player Wins! ");
         break;
       }
+      // End player move //
 
-      // AI move
+      // AI move //
       stonesTaken = num.nextInt(3) + 1;
       if (stonesTaken > stones){ stonesTaken = stones; }
       // a move consists of removing 1-3 stones from the bag
       System.out.println("The computer takes " + stonesTaken + " stones.");
       stones -= stonesTaken;
-      // check for win
-      if (stones <= 0) {
+      if (stones <= 0) { // check for win
         System.out.println("Computer Wins! ");
         break;
       }      
+      // End AI move //
       
     } 
     
