@@ -39,7 +39,8 @@ public class Nim {
         stonesTaken = input.nextInt();
       }
       stones -= stonesTaken;
-      if (stones <= 0) { // check for a player win
+      if (stones < 0) { stones = 0; } // keep it >= 0!
+      if (stones <= 0) {  // check for a player win
         System.out.println("Player Wins! ");
         break;
       }
@@ -47,7 +48,7 @@ public class Nim {
 
       // AI move //
       stonesTaken = num.nextInt(3) + 1;
-      if (stonesTaken > stones){ stonesTaken = stones; }
+      if (stonesTaken > stones){ stonesTaken = stones; } // keep it >= 0!
       // a move consists of removing 1-3 stones from the bag
       System.out.println("The computer takes " + stonesTaken + " stones.");
       stones -= stonesTaken;
