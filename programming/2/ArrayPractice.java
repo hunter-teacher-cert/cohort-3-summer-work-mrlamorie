@@ -34,10 +34,10 @@
    Complete all the methods for basic and also
    - buildIncreasingArray x
    - isSorted x
-   - countOdds
+   - countOdds x
 
    Advanced:
-   Complete all the methods
+   Complete all the methods x
 */
 
 import java.util.*;
@@ -298,7 +298,7 @@ public class ArrayPractice
     System.out.print("Before: ");
     printArray(data3);
     System.out.println();
-    flip(data3);
+    flip(data3); // done
     System.out.print("After: ");
     printArray(data3);
     System.out.println();
