@@ -24,15 +24,15 @@
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    Basic:
    Complete these methods:
-   - buildRandomArray
-   - printArray
-   - arraySum
-   - firstOccurence
-   - findMaxValue
+   - buildRandomArray x
+   - printArray x
+   - arraySum x
+   - firstOccurence x
+   - findMaxValue x
 
    Intermediate:
    Complete all the methods for basic and also
-   - buildIncreasingArray
+   - buildIncreasingArray x
    - isSorted
    - countOdds
 
@@ -246,7 +246,14 @@ public class ArrayPractice
   */
   public static void flip( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
+    int[] intermediate = new int[data.length]; // temp storage
+    int end = data.length -1; // for sanity sake
+    for(int i = 0; i <= end; i++){
+      intermediate[i] = data[end -i];
+    }
+    for(int i = 0; i <= end; i++){
+      data[i] = intermediate[i];
+    }
   }
 
 
@@ -286,7 +293,14 @@ public class ArrayPractice
 
     System.out.println("--------- countOdds test ({5,6,7,8,9,10}) ---------");
     System.out.println(countOdds(data6)); // done
-    
+
+    System.out.println("--------- flip test ({1,5,2,7,5,8,5,12,19,5}) ---------");
+    System.out.print("Before: ");
+    printArray(data3);
+    System.out.println();
+    flip(data3);
+    System.out.print("After: ");
+    printArray(data3);
     System.out.println();
 
   }
