@@ -1,7 +1,7 @@
 /**
  * Game of Nim by Team BossCoders
  * William LaMorie
- * collaborators: First Last, First Last
+ * collaborators: Seth Adams, Latoya Boland, Yanique Sears
  */
 import java.io.*;
 import java.util.*;
@@ -27,6 +27,7 @@ public class Nim {
     Random num = new Random();
     
     // facilitate play until human or AI wins, and announce winner
+    // assuming the player goes first
     while(stones > 0){
       System.out.println("There are currently " + stones + " stones left.");
       
@@ -40,19 +41,22 @@ public class Nim {
       }
       stones -= stonesTaken;
       if (stones < 0) { stones = 0; } // keep it >= 0!
-      if (stones <= 0) {  // check for a player win
+      if (stones == 0) {  // check for a player win
         System.out.println("Player Wins! ");
         break;
       }
       // End player move //
 
       // AI move //
-      stonesTaken = num.nextInt(3) + 1;
-      if (stonesTaken > stones){ stonesTaken = stones; } // keep it >= 0!
+      if(stones <= 3){
+        stonesTaken = stones;
+      } else {
+        stonesTaken = num.nextInt(3) + 1;
+      }
       // a move consists of removing 1-3 stones from the bag
       System.out.println("The computer takes " + stonesTaken + " stones.");
       stones -= stonesTaken;
-      if (stones <= 0) { // check for win
+      if (stones == 0) { // check for win
         System.out.println("Computer Wins! ");
         break;
       }      
