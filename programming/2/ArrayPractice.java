@@ -1,7 +1,7 @@
 /**
  * ArrayPractice by Team BossCoders
  * William LaMorie
- * collaborators: hfung8, WayneTobias
+ * collaborators: Harrison Fung, Wayne Tobias
  */
 
 /**
