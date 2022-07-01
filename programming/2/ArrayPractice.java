@@ -33,7 +33,7 @@
    Intermediate:
    Complete all the methods for basic and also
    - buildIncreasingArray x
-   - isSorted
+   - isSorted x
    - countOdds
 
    Advanced:
