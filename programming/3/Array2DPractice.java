@@ -29,7 +29,7 @@ import java.util.*;
    - explodeSquare X
 
    Advanced level (complete Basic + Intermediate + these two methods):
-   - explodeAllChar *
+   - explodeAllChar X
    - downString
 
    The routines with the * will be particularly helpful for the
@@ -170,8 +170,8 @@ public class Array2DPractice
   */
   public static void explodeSquare( char[][] board, int row, int col )
   {
-    int y = row;
-    int z = col;
+    int y = row; // because reference
+    int z = col; // because reference
     // for all from row -1 > row + 1 where value >= 0 and < board.length
     for(int i = row -1; i <= row +1; i++){
       if((i >= 0) && (i < board.length)){ // constrain to board
@@ -270,13 +270,22 @@ public class Array2DPractice
   */
   public static void downString( char[][] board, int row, int col, String word )
   {
-    /* YOUR AWESOME CODE HERE */
+    
+    int current = 0; //tracker for word
+    for(int i = row; i < board.length; i++){ // start at row
+      
+      if(current < word.length()){ // don't pass out of word!
+        
+        board[i][col] = word.charAt(current); // put word @ border col @ tracker
+        current ++; //update tracker
+      }
+    }
   }
 
 
   public static void main( String[] args )
   {
-    char[][] b = buildBoard(5,10,'z');
+    char[][] tst5 = buildBoard(6,8,'z');
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
@@ -314,6 +323,11 @@ public class Array2DPractice
     System.out.println("end tst4 :");
     explodeAllChar(tst4, 'z');
     printBoard(tst4);
-    
+    System.out.println("--------- downString(tst5,1,1,'Hello') test ---------");
+    downString(tst5,1,1,"Hello");
+    printBoard(tst5);
+    System.out.println("--------- downString(tst5,4,3,'World') test ---------");
+    downString(tst5,4,3,"World");
+    printBoard(tst5);
   }
 }
