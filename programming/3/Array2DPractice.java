@@ -170,6 +170,8 @@ public class Array2DPractice
   */
   public static void explodeSquare( char[][] board, int row, int col )
   {
+    int y = row;
+    int z = col;
     // for all from row -1 > row + 1 where value >= 0 and < board.length
     for(int i = row -1; i <= row +1; i++){
       if((i >= 0) && (i < board.length)){ // constrain to board
@@ -179,7 +181,7 @@ public class Array2DPractice
           
           if((j >= 0) && (j < board[row].length)){ // constrain to board
             // if i = row and j = col continue
-            if((j != row) || (i != col)){
+            if((i != y) || (j != z)){
               board[i][j] = 'X';
             }
           }
