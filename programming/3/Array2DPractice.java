@@ -172,12 +172,12 @@ public class Array2DPractice
   {
     // for all from row -1 > row + 1 where value >= 0 and < board.length
     for(int i = row -1; i <= row +1; i++){
-      if((i >= 0) && (i < board.length)){
+      if((i >= 0) && (i < board.length)){ // constrain to board
 
         // for all from col -1 > col + 1 where value >= 0 and < board[row].length
         for(int j = col -1; j <= col +1; j ++){
           
-          if((j >= 0) && (j < board[row].length)){
+          if((j >= 0) && (j < board[row].length)){ // constrain to board
             // if i = row and j = col continue
             if((j != row) || (i != col)){
               board[i][j] = 'X';
