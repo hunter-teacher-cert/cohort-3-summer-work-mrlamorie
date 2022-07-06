@@ -33,7 +33,7 @@ public class Cgol
     char[][] board = new char[rows][cols];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        board[i][j]='.';
+        board[i][j]=' ';
       }
     }
     return board;    
@@ -108,7 +108,7 @@ public class Cgol
   {
     int n = countNeighbours(board, r, c);
     if((n == 2) || (n == 3)){ return 'X';}
-    return '.';
+    return ' ';
   }
 
 
@@ -135,7 +135,7 @@ public class Cgol
 
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     char[][] board;
     board = createNewBoard(25,25);
 
@@ -160,7 +160,7 @@ public class Cgol
     System.out.println("Gen X+1:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-     neightest = countNeighbours(board, 0, 0);
+    neightest = countNeighbours(board, 0, 0);
     System.out.println(neightest);
     
     board = generateNextBoard(board);
@@ -168,9 +168,18 @@ public class Cgol
     System.out.println("Gen X+2:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-     neightest = countNeighbours(board, 0, 0);
+    neightest = countNeighbours(board, 0, 0);
     System.out.println(neightest);
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    board = generateNextBoard(board);
+    
+    System.out.println("Gen X+3:");
+    printBoard(board);
+    System.out.println("--------------------------\n\n");
+    neightest = countNeighbours(board, 0, 0);
+    System.out.println(neightest);
+    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /*
     char[][] board;
     board = createNewBoard(25,25);
