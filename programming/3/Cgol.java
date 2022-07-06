@@ -27,12 +27,13 @@ public class Cgol
 {
 
   //create, initialize, and return  empty board (all cells dead)
+  // done
   public static char[][] createNewBoard( int rows, int cols )
   {  // ported from 2D practice
     char[][] board = new char[rows][cols];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        board[i][j]=' ';
+        board[i][j]='.';
       }
     }
     return board;    
@@ -40,11 +41,12 @@ public class Cgol
 
 
   //print the board to the terminal
+  //done
   public static void printBoard( char[][] board )
   { // ported from 2D practice
     for (int i = 0; i < board.length; i ++){
       for (int j = 0; j < board[i].length; j++){
-        System.out.print("" + board[i][j]);
+        System.out.print(" " + board[i][j]);
       }
       System.out.println();
     }
@@ -52,6 +54,7 @@ public class Cgol
 
 
   //set cell (r,c) to val
+  //done
   public static void setCell( char[][] board, int r, int c, char val )
   {
     board[r][c] = val;
@@ -59,9 +62,40 @@ public class Cgol
 
 
   //return number of living neigbours of board[r][c]
-  public static int countNeighbours( char[][] board, int r, int c )
-  {
-    return 0; //ph
+  //done
+  public static int countNeighbours( char[][] board, int row, int col )
+  { 
+  { // same logic for finding area around as explode -same as ExplodeSquare method from 2DArray
+    //traverse through the elements in row and column 
+    // this explodeSquare method was used in Cgol's countNeighbor method
+    int total = 0;
+    //the goal is to find the area around the grid finding the squares around your target "x"
+    for (int i=0; i<board.length; i++){
+      for (int j=0; j<board[i].length; j++){
+        // if ((i>=row-1 && i<row+1) && (j>=col-1 && j<=col-1) && (i!=row || j!= col))
+        if (i>=row-1 && i<=row+1) //tra   
+          if(j>=col-1 && j<=col+1)
+            if(i!=row || j!= col)
+              //----------
+              //-----+++--
+              //-----+H+--
+              //-----+++--
+              //----------
+              
+              // +++
+              // +H+
+              // +++
+              // now we are looking for "living neighbors in the + area above"
+              // a living neighbor is an 'X'
+              // so we want to see if board[i][j] is an 'X' and if so, add it to the total
+              if(board[i][j] == 'X'){ 
+                total ++;
+              }
+        
+      }
+    } 
+    return total;
+  }
   }
 
 
@@ -72,20 +106,37 @@ public class Cgol
   */
   public static char getNextGenCell( char[][] board,int r, int c )
   {
-    return ''; // ph
+    int n = countNeighbours(board, r, c);
+    //System.out.println("R: " + r + " C: " + c + " N: " + nn);
+    if((n == 2) || (n == 3)){ return 'X';}
+    return '.';
   }
 
 
   //generate and return a new board representing next generation
   public static char[][] generateNextBoard( char[][] board )
   {
-    
-  }
+    // make a new board
+    char[][] newBoard = createNewBoard(25,25);
 
+    // loop though the old board. 
+    for(int i = 0; i < board.length; i++){
+      for(int j = 0; j < board[0].length; j++){
+        // check each cell in the old board for conditions
+        char cell = getNextGenCell(board, i, j);
+        // update the new board
+        newBoard[i][j] = cell;
+      }
+    }
+
+    // return board;
+    return newBoard;
+  }
+  
 
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     char[][] board;
     board = createNewBoard(25,25);
 
@@ -102,13 +153,39 @@ public class Cgol
     System.out.println("Gen X:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-
+    int neightest = countNeighbours(board, 0, 0);
+    System.out.println(neightest);
+    
     board = generateNextBoard(board);
 
     System.out.println("Gen X+1:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+     neightest = countNeighbours(board, 0, 0);
+    System.out.println(neightest);
+    
+    board = generateNextBoard(board);
+    
+    System.out.println("Gen X+2:");
+    printBoard(board);
+    System.out.println("--------------------------\n\n");
+     neightest = countNeighbours(board, 0, 0);
+    System.out.println(neightest);
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*
+    char[][] board;
+    board = createNewBoard(25,25);
+    setCell(board, 0, 0, 'X');
+    setCell(board, 0, 1, 'X');
+    setCell(board, 1, 0, 'X');
+    printBoard(board);
+    int neightest = countNeighbours(board, 0, 0);
+    char alive = getNextGenCell(board, 0, 0);
+    System.out.println(neightest);
+    System.out.println(alive);
+    alive = getNextGenCell(board, 7, 0);
+    System.out.println(alive);
+    */
   }//end main()
 
 }//end class
