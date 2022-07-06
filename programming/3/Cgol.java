@@ -63,39 +63,32 @@ public class Cgol
 
   //return number of living neigbours of board[r][c]
   //done
-  public static int countNeighbours( char[][] board, int row, int col )
-  { 
-  { // same logic for finding area around as explode -same as ExplodeSquare method from 2DArray
+  public static int countNeighbours( char[][] board, int row, int col ) { 
+    // same logic for finding area around as explode 
+    //-same as ExplodeSquare method from 2DArray
     //traverse through the elements in row and column 
     // this explodeSquare method was used in Cgol's countNeighbor method
     int total = 0;
-    //the goal is to find the area around the grid finding the squares around your target "x"
+    //the goal is to find the area around the grid finding 
+    //the squares around your target "x"
     for (int i=0; i<board.length; i++){
       for (int j=0; j<board[i].length; j++){
         // if ((i>=row-1 && i<row+1) && (j>=col-1 && j<=col-1) && (i!=row || j!= col))
-        if (i>=row-1 && i<=row+1) 
-          if(j>=col-1 && j<=col+1)
-            if(i!=row || j!= col)
-              //----------
-              //-----+++--
-              //-----+H+--
-              //-----+++--
-              //----------
-              
-              // +++
-              // +H+
-              // +++
-              // now we are looking for "living neighbors in the + area above"
-              // a living neighbor is an 'X'
-              // so we want to see if board[i][j] is an 'X' and if so, add it to the total
-              if(board[i][j] == 'X'){ 
-                total ++;
-              }
         
+        if (i>=row-1 && i<=row+1) {  // constrain
+          
+          if(j>=col-1 && j<=col+1) { // constrain
+            
+            if(i!=row || j!= col){ // avoid self
+              
+              if(board[i][j] == 'X'){ total ++; }
+              
+            }
+          }
+        } 
       }
     } 
     return total;
-  }
   }
 
 
@@ -107,8 +100,18 @@ public class Cgol
   public static char getNextGenCell( char[][] board,int r, int c )
   {
     int n = countNeighbours(board, r, c);
-    if((n == 2) || (n == 3)){ return 'X';}
-    return ' ';
+
+    // if populated, survive if 2 or 3 friends
+    if(board[r][c] == 'X'){
+      if((n == 2) || (n == 3)){ return 'X';}
+    }
+
+    // if dead, come to life if 3 friends
+    if(board[r][c] == ' '){
+      if(n == 3){ return 'X'; }
+      
+    }
+    return ' '; 
   }
 
 
@@ -143,6 +146,7 @@ public class Cgol
     setCell(board, 0, 0, 'X');
     setCell(board, 0, 1, 'X');
     setCell(board, 1, 0, 'X');
+    
 
     // TASK:
     // Once your initial version is running,
