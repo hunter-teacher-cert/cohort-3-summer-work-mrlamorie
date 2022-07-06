@@ -73,7 +73,7 @@ public class Cgol
     for (int i=0; i<board.length; i++){
       for (int j=0; j<board[i].length; j++){
         // if ((i>=row-1 && i<row+1) && (j>=col-1 && j<=col-1) && (i!=row || j!= col))
-        if (i>=row-1 && i<=row+1) //tra   
+        if (i>=row-1 && i<=row+1) 
           if(j>=col-1 && j<=col+1)
             if(i!=row || j!= col)
               //----------
