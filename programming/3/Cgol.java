@@ -107,7 +107,6 @@ public class Cgol
   public static char getNextGenCell( char[][] board,int r, int c )
   {
     int n = countNeighbours(board, r, c);
-    //System.out.println("R: " + r + " C: " + c + " N: " + nn);
     if((n == 2) || (n == 3)){ return 'X';}
     return '.';
   }
@@ -136,7 +135,7 @@ public class Cgol
 
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     char[][] board;
     board = createNewBoard(25,25);
 
@@ -171,7 +170,7 @@ public class Cgol
     System.out.println("--------------------------\n\n");
      neightest = countNeighbours(board, 0, 0);
     System.out.println(neightest);
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /*
     char[][] board;
     board = createNewBoard(25,25);
@@ -184,6 +183,21 @@ public class Cgol
     System.out.println(neightest);
     System.out.println(alive);
     alive = getNextGenCell(board, 7, 0);
+    System.out.println(alive);
+    
+    char[][] board;
+    board = createNewBoard(5,5);// changed from 25 x 25 to 5 x 5 based on classmate's presentation, makes board more managable
+    setCell(board, 1, 1, 'H'); // for visualization in countNeighbours code, same position
+    setCell(board, 0, 0, 'X');
+    setCell(board, 0, 1, 'X');
+    setCell(board, 1, 0, 'X');
+    setCell(board, 1, 2, 'X');
+    printBoard(board);
+    int neightest = countNeighbours(board, 1, 1); // where the test is happening
+    char alive = getNextGenCell(board, 1, 1);
+    System.out.println(neightest);
+    System.out.println(alive);
+    alive = getNextGenCell(board, 0, 0);
     System.out.println(alive);
     */
   }//end main()
