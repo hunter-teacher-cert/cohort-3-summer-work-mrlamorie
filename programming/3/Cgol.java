@@ -152,32 +152,42 @@ public class Cgol
     System.out.println("Gen X:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-    int neightest = countNeighbours(board, 0, 0);
-    System.out.println(neightest);
+
     
     board = generateNextBoard(board);
 
     System.out.println("Gen X+1:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-    neightest = countNeighbours(board, 0, 0);
-    System.out.println(neightest);
+
     
     board = generateNextBoard(board);
     
     System.out.println("Gen X+2:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-    neightest = countNeighbours(board, 0, 0);
-    System.out.println(neightest);
+
 
     board = generateNextBoard(board);
     
     System.out.println("Gen X+3:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-    neightest = countNeighbours(board, 0, 0);
-    System.out.println(neightest);
+
+
+    board = generateNextBoard(board);
+    
+    System.out.println("Gen X+4:");
+    printBoard(board);
+    System.out.println("--------------------------\n\n");
+
+
+    board = generateNextBoard(board);
+    
+    System.out.println("Gen X+5:");
+    printBoard(board);
+    System.out.println("--------------------------\n\n");
+
     
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /*
