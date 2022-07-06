@@ -143,9 +143,9 @@ public class Cgol
     board = createNewBoard(25,25);
 
     //breathe life into some cells:
-    setCell(board, 0, 0, 'X');
     setCell(board, 0, 1, 'X');
-    setCell(board, 1, 0, 'X');
+    setCell(board, 1, 1, 'X');
+    setCell(board, 2, 1, 'X');
     
 
     // TASK:
