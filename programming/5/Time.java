@@ -22,15 +22,15 @@ import java.util.*;
    Basic level (complete all):
    - public Time(int hrs, int mins, int secs) - x
    - public void toString() - x
-   - public void set(int hrs, int mins, int secs)
+   - public void set(int hrs, int mins, int secs) x
 
    Intermediate level (complete Basic methods plus this method):
-   - public void add(Time other)
-   - public boolean isEquals(Time other)
+   - public void add(Time other) x
+   - public boolean isEquals(Time other) x
 
    
    Advanced level (complete Basic + Intermediate + these two methods):
-   - public int compareTo(Time other)
+   - public int compareTo(Time other) x
    
 */
 
@@ -174,6 +174,7 @@ public class Time {
     private int toSeconds(int h, int m, int s){
       return (h * 3600) + (m * 60) + s;
     }
+
   
     /**
        Parameters:
