@@ -41,8 +41,9 @@ public class Driver {
     System.out.println(t.equals(o)); // true equals testing DONE!
     t.add(o); // setting t to 2x o to test false case DONE!
     System.out.println(t.equals(o)); // false equals testing DONE!
+    t.set(1, 1, 1); // known output for toSeconds in fxn test
     //System.out.println(t.toSeconds(1, 1, 1)); // testing helper fxn // moved prvt
-    
+    System.out.println(t.compareTo(o)); // testing helper in fxn
   }//end main()
 
 }//end class
