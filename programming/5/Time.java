@@ -21,7 +21,7 @@ import java.util.*;
 
    Basic level (complete all):
    - public Time(int hrs, int mins, int secs) - x
-   - public void toString()
+   - public void toString() - x
    - public void set(int hrs, int mins, int secs)
 
    Intermediate level (complete Basic methods plus this method):
@@ -88,9 +88,9 @@ public class Time {
       if(hour == 0) { hour = 12; }
       
       // build it here for extra clearness
-      String retStr = "The time is " + hour + ":" + mins + ":" + sec + " " + an;
+      String retSt = "The time is " + hour + ":" + mins + ":" + sec + " " + an + ".";
       
-	    return retStr;
+	    return retSt;
     }
 
 
@@ -103,9 +103,9 @@ public class Time {
        modifies this instance to represent the time hrs:mins:secs
     */
     public void set(int hrs, int mins, int secs){
-	    // add the code to add the time represented by other
-	    // to this instance.
-
+	    this.hours = hrs;
+      this.minutes = mins;
+      this.seconds = secs;
     }
 
     

@@ -30,8 +30,10 @@ public class Driver {
 	  //assign var the address of a newly-apportioned Time object
 	  //t = new Time(); // object instation test. DONE!
     
-    t = new Time(12, 6, 30); // constructor test. 
-    System.out.println(t.toString()); // To string test
+    t = new Time(0, 6, 30); // constructor test. DONE!
+    System.out.println(t.toString()); // To string test DONE!
+    t.set(12, 45, 11); // Time.set() test. DONE!
+    System.out.println(t.toString()); // Time.set() test. DONE!
     
   }//end main()
 
