@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * Time class by Team LucidThinkeren
- * First Last
- * collaborators: First Last, First Last
+ * William LaMorie  (group 6)
+ * collaborators: Nicole C, Latoya B
  */
 
 /**
@@ -20,7 +20,7 @@ import java.util.*;
    Place this file in a folder named programming/5/Time.java
 
    Basic level (complete all):
-   - public Time(int hrs, int mins, int secs) - constructor
+   - public Time(int hrs, int mins, int secs) - x
    - public void toString()
    - public void set(int hrs, int mins, int secs)
 
@@ -47,10 +47,9 @@ public class Time {
 
     // Constructors
     public Time(){
-	this.hours = 0;
-	this.minutes = 0;
-	this.seconds = 0;
-	
+	    this.hours = 0;
+	    this.minutes = 0;
+	    this.seconds = 0;	
     }
 
     /**
@@ -62,18 +61,36 @@ public class Time {
      */
     public Time(int hrs, int mins, int secs){
 
-	// your code here
+	    this.hours = hrs;
+      this.minutes = mins;
+      this.seconds = secs;
 	
     }
     
     
-    // Methods
+    //--------------- Methods
 
     /**
        returns a string representation of the time
     */
     public String toString(){
-	return("This should be changed to return the time in a nice form");
+      String an; // should have a better name
+      int hour = this.hours; // Will play with if 0 or PM
+      String mins = String.format("%02d", this.minutes);  // to make single double
+      String sec = String.format("%02d", this.seconds);   // eg 5 -> 05
+      
+      if(this.hours >= 12){ // making a nice looking output
+        hour = hour - 12;
+        an = "PM";
+      } else {
+        an = "AM";
+      }
+      if(hour == 0) { hour = 12; }
+      
+      // build it here for extra clearness
+      String retStr = "The time is " + hour + ":" + mins + ":" + sec + " " + an;
+      
+	    return retStr;
     }
 
 
@@ -86,8 +103,8 @@ public class Time {
        modifies this instance to represent the time hrs:mins:secs
     */
     public void set(int hrs, int mins, int secs){
-	// add the code to add the time represented by other
-	// to this instance.
+	    // add the code to add the time represented by other
+	    // to this instance.
 
     }
 
@@ -101,11 +118,10 @@ public class Time {
        the time other.
     */
     public void add(Time other){
-	// add the code to add the time represented by other
-	// to this instance.
+	    // add the code to add the time represented by other
+	    // to this instance.
 
     }
-
 
     /**
        Parameters:
@@ -116,9 +132,9 @@ public class Time {
        false otherwise.
     */
     public boolean equals(Time other){
-	// your code here)
+	    // your code here)
 
-	return false; // change this
+	    return false; // change this
     }
 
     /**
@@ -136,9 +152,9 @@ public class Time {
 
     */
     public int compareTo(Time other){
-	// your code here)
+	    // your code here)
 
-	return 0; // change this
+	    return 0; // change this
     }
     
 
