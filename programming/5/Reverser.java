@@ -13,8 +13,20 @@ public class Reverser
      postcond: returns input String with chars in reverse order
   */
   public static String reverseR( String s )
-  {
-    /* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
+  { 
+    // if the length of the string is 1 return it
+    if(s.length() == 1 || s.length() == 0){
+      return s;
+    }
+    
+    // last leter = index at string len - 1
+    // String news - last char = 0 - string len - 2
+    int lasti = s.length() -1; // location of last letter
+    char last = s.charAt(lasti); // last letter
+    String ns = s.substring(0,lasti);// second param non inclucsive
+    
+    // return last leter + reverseR(String s - last char)
+    return last + reverseR(ns);
   }
 
 
