@@ -18,7 +18,13 @@ public class Fence
   */
   public static String fenceR( int n )
   {
-    /* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
+    if(n == 0){
+      return " ";
+    }
+    if(n == 1){
+      return "|";
+    }
+    return fenceR(n-1) + "--|";
   }
 
 
