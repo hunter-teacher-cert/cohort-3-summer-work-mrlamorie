@@ -22,15 +22,15 @@ import java.util.*;
    Basic level (complete all):
    - public Time(int hrs, int mins, int secs) - x
    - public void toString() - x
-   - public void set(int hrs, int mins, int secs)
+   - public void set(int hrs, int mins, int secs) x
 
    Intermediate level (complete Basic methods plus this method):
-   - public void add(Time other)
-   - public boolean isEquals(Time other)
+   - public void add(Time other) x
+   - public boolean isEquals(Time other) x
 
    
    Advanced level (complete Basic + Intermediate + these two methods):
-   - public int compareTo(Time other)
+   - public int compareTo(Time other) x
    
 */
 
@@ -82,8 +82,8 @@ public class Time {
     }
 
     /* toString2
-    a version of toString that assumes a single day format is expected
-    */
+    a verbose version of toString that assumes a single day format is expected
+    
     public String toString2(){
       String an; // should have a better name
       int hour = hours; // Will play with if 0 or PM
@@ -103,6 +103,7 @@ public class Time {
       
 	    return retSt;
     }
+    */
 
     /**
        Parameters:
@@ -190,10 +191,13 @@ public class Time {
 
     */
     public int compareTo(Time other){
-	    
+
       int s = toSeconds(hours, minutes, seconds); // self value
       int o = toSeconds(other.hours, other.minutes, other.seconds); // other value
-	    return s - o; // return the diff
+
+      int retVal = s - o; // return value
+      
+      return retVal; // return the diff
     }
         
 }//end class
