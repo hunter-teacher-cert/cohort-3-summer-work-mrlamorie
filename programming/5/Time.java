@@ -74,6 +74,19 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
+      String hour = String.format("%02d", this.hours);
+      String mins = String.format("%02d", this.minutes);  // to make single double
+      String sec = String.format("%02d", this.seconds);   // eg 5 -> 05
+      
+      String retSt = "" + hour + ":" + mins + ":" + sec;
+      
+	    return retSt;
+    }
+
+    /* toString2
+    a version of toString that assumes a single day format is expected
+    */
+    public String toString2(){
       String an; // should have a better name
       int hour = this.hours; // Will play with if 0 or PM
       String mins = String.format("%02d", this.minutes);  // to make single double
@@ -143,8 +156,16 @@ public class Time {
     */
     public boolean equals(Time other){
 	    // your code here)
-
-	    return false; // change this
+      if((this.hours == other.hours) && // if the hours are the same
+         (this.minutes == other.minutes) && // if the minutes are the same
+         (this.seconds == other.seconds)) { // if the seconds are the same
+        
+        return true;
+        
+      } else {
+        
+	      return false; 
+      }
     }
 
     /**
