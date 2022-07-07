@@ -190,8 +190,9 @@ public class Time {
     */
     public int compareTo(Time other){
 	    
-      int self = toSeconds(hours, minutes, seconds); // self value
-	    return self; // change this
+      int s = toSeconds(hours, minutes, seconds); // self value
+      int o = toSeconds(other.hours, other.minutes, other.seconds);
+	    return s - o; // change this
     }
         
 }//end class
