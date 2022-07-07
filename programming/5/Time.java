@@ -163,6 +163,17 @@ public class Time {
       }
     }
 
+    /*
+      toSeconds(h,m,s) - helper file to push format to seconds
+      @param h {int} an int representing a hour value
+      @param m {int} represents a minute value
+      @param s {int} represents a seconds value
+      
+      @return {int} an hour, minute, second time converted to seconds
+    */
+    private int toSeconds(int h, int m, int s){
+      return (h * 3600) + (m * 60) + s;
+    }
     /**
        Parameters:
        other - a variable of type Time
@@ -178,9 +189,9 @@ public class Time {
 
     */
     public int compareTo(Time other){
-	    // your code here)
-
-	    return 0; // change this
+	    
+      int self = toSeconds(hours, minutes, seconds); // self value
+	    return self; // change this
     }
         
 }//end class
