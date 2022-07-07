@@ -34,8 +34,6 @@ import java.util.*;
    
 */
 
-
-
 public class Time {
     // Instance Variable(s)
     // You can change this if you want to use the alternate
@@ -47,9 +45,9 @@ public class Time {
 
     // Constructors
     public Time(){
-	    this.hours = 0;
-	    this.minutes = 0;
-	    this.seconds = 0;	
+	    hours = 0;
+	    minutes = 0;
+	    seconds = 0;	
     }
 
     /**
@@ -61,9 +59,9 @@ public class Time {
      */
     public Time(int hrs, int mins, int secs){
 
-	    this.hours = hrs;
-      this.minutes = mins;
-      this.seconds = secs;
+	    hours = hrs;
+      minutes = mins;
+      seconds = secs;
 	
     }
     
@@ -74,9 +72,9 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-      String hour = String.format("%02d", this.hours);
-      String mins = String.format("%02d", this.minutes);  // to make single double
-      String sec = String.format("%02d", this.seconds);   // eg 5 -> 05
+      String hour = String.format("%02d", hours);
+      String mins = String.format("%02d", minutes);  // to make single double
+      String sec = String.format("%02d", seconds);   // eg 5 -> 05
       
       String retSt = "" + hour + ":" + mins + ":" + sec;
       
@@ -88,11 +86,11 @@ public class Time {
     */
     public String toString2(){
       String an; // should have a better name
-      int hour = this.hours; // Will play with if 0 or PM
-      String mins = String.format("%02d", this.minutes);  // to make single double
-      String sec = String.format("%02d", this.seconds);   // eg 5 -> 05
+      int hour = hours; // Will play with if 0 or PM
+      String mins = String.format("%02d", minutes);  // to make single double
+      String sec = String.format("%02d", seconds);   // eg 5 -> 05
       
-      if(this.hours >= 12){ // making a nice looking output
+      if(hours >= 12){ // making a nice looking output
         hour = hour - 12;
         an = "PM";
       } else {
@@ -106,9 +104,6 @@ public class Time {
 	    return retSt;
     }
 
-
-    
-
     /**
        Parameters:
        - hrs,mins,secs - ints representing a time
@@ -116,9 +111,9 @@ public class Time {
        modifies this instance to represent the time hrs:mins:secs
     */
     public void set(int hrs, int mins, int secs){
-	    this.hours = hrs;
-      this.minutes = mins;
-      this.seconds = secs;
+	    hours = hrs;
+      minutes = mins;
+      seconds = secs;
     }
 
     
@@ -131,16 +126,16 @@ public class Time {
        the time other.
     */
     public void add(Time other){
-	    this.hours += other.hours;
-      this.seconds += other.seconds;
-      if(this.seconds >= 60){
-        this.minutes += 1;
-        this.seconds -= 60;
+	    hours += other.hours;
+      seconds += other.seconds;
+      if(seconds >= 60){
+        minutes += 1;
+        seconds -= 60;
       }
-      this.minutes += other.minutes;
-      if(this.minutes >= 60){
-        this.hours += 1;
-        this.minutes -= 60;
+      minutes += other.minutes;
+      if(minutes >= 60){
+        hours += 1;
+        minutes -= 60;
       }
 
 
@@ -156,9 +151,9 @@ public class Time {
     */
     public boolean equals(Time other){
 	    // your code here)
-      if((this.hours == other.hours) && // if the hours are the same
-         (this.minutes == other.minutes) && // if the minutes are the same
-         (this.seconds == other.seconds)) { // if the seconds are the same
+      if((hours == other.hours) && // if the hours are the same
+         (minutes == other.minutes) && // if the minutes are the same
+         (seconds == other.seconds)) { // if the seconds are the same
         
         return true;
         
@@ -187,7 +182,5 @@ public class Time {
 
 	    return 0; // change this
     }
-    
-
-    
+        
 }//end class

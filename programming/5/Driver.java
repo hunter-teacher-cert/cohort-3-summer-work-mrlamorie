@@ -37,8 +37,10 @@ public class Driver {
     System.out.println(t.toString()); // Time.set() test. DONE!
     t.add(o); // time add - DONE!
     System.out.println(t.toString()); // time.add test DONE!
-    t.set(1, 30, 30); // set t to == o for equals testing true case
-    System.out.println(t.equals(o)) // true equals testing
+    t.set(1, 30, 30); // set t to == o for equals testing true case DONE!
+    System.out.println(t.equals(o)); // true equals testing DONE!
+    t.add(o); // setting t to 2x o to test false case DONE!
+    System.out.println(t.equals(o)); // false equals testing DONE!
     
   }//end main()
 
