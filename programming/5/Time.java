@@ -174,6 +174,7 @@ public class Time {
     private int toSeconds(int h, int m, int s){
       return (h * 3600) + (m * 60) + s;
     }
+  
     /**
        Parameters:
        other - a variable of type Time
@@ -191,8 +192,8 @@ public class Time {
     public int compareTo(Time other){
 	    
       int s = toSeconds(hours, minutes, seconds); // self value
-      int o = toSeconds(other.hours, other.minutes, other.seconds);
-	    return s - o; // change this
+      int o = toSeconds(other.hours, other.minutes, other.seconds); // other value
+	    return s - o; // return the diff
     }
         
 }//end class
