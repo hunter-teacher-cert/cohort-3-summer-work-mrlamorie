@@ -118,8 +118,18 @@ public class Time {
        the time other.
     */
     public void add(Time other){
-	    // add the code to add the time represented by other
-	    // to this instance.
+	    this.hours += other.hours;
+      this.seconds += other.seconds;
+      if(this.seconds >= 60){
+        this.minutes += 1;
+        this.seconds -= 60;
+      }
+      this.minutes += other.minutes;
+      if(this.minutes >= 60){
+        this.hours += 1;
+        this.minutes -= 60;
+      }
+
 
     }
 

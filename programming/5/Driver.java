@@ -25,16 +25,18 @@ public class Driver {
   public static void main(String[] args) {
 
 	//declare a var of appropriate type to assign an instance of Time to
-	  Time t;
+	  Time t, o;
 
 	  //assign var the address of a newly-apportioned Time object
 	  //t = new Time(); // object instation test. DONE!
     
     t = new Time(0, 6, 30); // constructor test. DONE!
+    o = new Time(1, 30, 30); // for add test.
     System.out.println(t.toString()); // To string test DONE!
-    t.set(12, 45, 11); // Time.set() test. DONE!
+    t.set(10, 30, 30); // Time.set() test. DONE!
     System.out.println(t.toString()); // Time.set() test. DONE!
-    
+    t.add(o); // time add - simple version done
+    System.out.println(t.toString());
   }//end main()
 
 }//end class
