@@ -61,22 +61,15 @@ public class SuperArray
   public void add( int value )
   {
     // test to see if we need to grow, then grow
+    // this isn't quite correct
+    // if(numberElements == data.length){ grow(); }
     
-    /**
-       IMPORTANT:
-       This is the first code that should run in this method
-       but the last code you should write.
-       Implement the rest of this method first,
-       then only write this section once the rest is tested and working.
-    */
-    /* YOUR SIMPLE+SMART CODE HERE */
-
     // add item
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data[numberElements] = value;
 
 
     // increment numberElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements ++;
 
   }//end add()
 
@@ -98,8 +91,8 @@ public class SuperArray
   {
     String s = "";
     for(int i = 0; i < numberElements; i++){
-      if (i == 0){ s = s + data[i]; }
-      else { s = s + ", " + data[i]; }
+      if (i >= 1 ){ s = s + ", " + data[i]; }
+      else { s = s + data[i]; }
     }
     return s;
   }

@@ -48,6 +48,9 @@ public class SuperArrayDriver
     System.out.println(sa.debug());
     // sa.grow(); // tested, back to private
     // System.out.println(sa.debug());
+    sa.add(5);
+    sa.add(2);
+    System.out.println(sa);
   }//main
 
 }//class SuperArrayDriver
