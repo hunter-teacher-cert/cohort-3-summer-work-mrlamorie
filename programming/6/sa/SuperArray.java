@@ -61,6 +61,7 @@ public class SuperArray
   public void add( int value )
   {
     // test to see if we need to grow, then grow
+    
     /**
        IMPORTANT:
        This is the first code that should run in this method
@@ -95,9 +96,7 @@ public class SuperArray
 
   public String toString()
   {
-    for(int i = 0; i < data.length; i++){
-      System.out.print(data[i] + " "); // single line
-    }
+    return " ";
   }
 
 
@@ -145,9 +144,13 @@ public class SuperArray
 
   private void grow()
   {
-    // create a new array with extra space
-    // Q: How did you decide how much to increase capacity by?
-    /* YOUR SIMPLE+SMART CODE HERE */
+    /* create a new array with extra space
+    // Q: How did you decide how much to increase capacity by? 
+    // A: the spec never has a fxn where there is a case where we add more than 1
+    // item to the array at once
+     */
+    int newSize = data.length + 1; // add one to it!
+    int[] newData = new int[newSize];
 
     // copy over all the elements from the old array to the new one
     /* YOUR SIMPLE+SMART CODE HERE */

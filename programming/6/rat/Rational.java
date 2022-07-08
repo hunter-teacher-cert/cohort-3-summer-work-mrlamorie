@@ -1,7 +1,7 @@
 /**
  * Rational class by Team BangPi
  * William LaMorie
- * collaborators: First Last, First Last
+ * collaborators: Wayne T,	Suzie S,	Alicia W (room 3)
  */
 
 
@@ -49,6 +49,11 @@ public class Rational
   public Rational( int n, int d )
   {
     this();
+
+    if(d == 0){
+      throw new IllegalArgumentException("Divide by zero error!");
+    }
+    
     _numerator = n;
     _denominator = d;
   }
