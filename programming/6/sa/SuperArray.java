@@ -62,7 +62,7 @@ public class SuperArray
   {
     // test to see if we need to grow, then grow
     // this isn't quite correct
-    // if(numberElements == data.length){ grow(); }
+    if(numberElements == data.length){ grow(); }
     
     // add item
     data[numberElements] = value;
