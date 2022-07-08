@@ -1,6 +1,6 @@
 /**
  * Rational class by Team BangPi
- * First Last
+ * William LaMorie
  * collaborators: First Last, First Last
  */
 
@@ -14,10 +14,10 @@
    - toString x
    - default constructor x
    - multiply x
-   - divide
+   - divide x
 
    Intermediate level (complete Basic methods plus these methods):
-   - floatValue
+   - floatValue x
    - overloaded constructor x
 
    Advanced level (complete Basic + Intermediate + these methods):
