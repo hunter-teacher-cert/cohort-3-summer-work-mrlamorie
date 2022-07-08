@@ -46,8 +46,8 @@ public class SuperArrayDriver
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     SuperArray sa = new SuperArray();
     System.out.println(sa.debug());
-    sa.grow();
-    System.out.println(sa.debug());
+    // sa.grow(); // tested, back to private
+    // System.out.println(sa.debug());
   }//main
 
 }//class SuperArrayDriver

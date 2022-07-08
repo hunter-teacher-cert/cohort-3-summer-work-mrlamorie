@@ -96,8 +96,12 @@ public class SuperArray
 
   public String toString()
   {
-    
-    return " ";
+    String s = "";
+    for(int i = 0; i < data.length; i++){
+      if (i == 0){ s = s + data[i]; }
+      else { s = s + ", " + data[i]; }
+    }
+    return s;
   }
 
 
