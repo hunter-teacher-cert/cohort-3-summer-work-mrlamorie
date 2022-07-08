@@ -120,7 +120,7 @@ public class SuperArray
     // start at index
     // until numberElements -1
     // move i + 1 to i
-    /* YOUR SIMPLE+SMART CODE HERE */
+   
 
     // subtract fom numElements;
     /* YOUR SIMPLE+SMART CODE HERE */
