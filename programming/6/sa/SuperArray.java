@@ -96,6 +96,7 @@ public class SuperArray
 
   public String toString()
   {
+    
     return " ";
   }
 
@@ -159,7 +160,7 @@ public class SuperArray
     
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
-    data = newData
+    data = newData;
   }//end grow()
 
 }//end class
