@@ -97,6 +97,9 @@ public class Rational
   public void divide( Rational r )
   {
     // t.n/t.d ÷ r.n/r.d = t.n/t.d × r.d/r.n
+    if(r._numerator == 0){
+      throw new IllegalArgumentException("Divide by zero error!");
+    }
     _numerator *= r._denominator;
     _denominator *= r._numerator;
   }
