@@ -44,7 +44,8 @@ public class SuperArrayDriver
     sa.remove(15);
     System.out.println(sa);
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+    SuperArray sa = new SuperArray();
+    System.out.println(sa.debug());
   }//main
 
 }//class SuperArrayDriver

@@ -1,6 +1,6 @@
 /**
  * SuperArray by Team MarvelvsDC
- * First Last
+ * William LaMorie
  * collaborators: First Last, First Last
  */
 
@@ -39,10 +39,10 @@ public class SuperArray
   public SuperArray( int size )
   {
     //init underlying/inner storage of specified capacity
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data = new int[size];
 
     //init instance vars
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements = 0;
 
   }
 
@@ -50,10 +50,10 @@ public class SuperArray
   public SuperArray()
   {
     //init underlying/inner storage of capacity 10
-        /* YOUR SIMPLE+SMART CODE HERE */
+    data = new int[10];
 
     //init instance vars
-        /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements = 0;
   }
 
 
@@ -82,23 +82,23 @@ public class SuperArray
 
   public boolean isEmpty()
   {
-    //return whether this SuperArray instance is empty
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(numberElements != 0){ return false; }
+    return true; 
   }
 
 
   public int get(int index)
   {
-    //return item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
+    return data[index];
   }
 
 
   public String toString()
   {
-    //return stringified version of this Object
-    /* YOUR SIMPLE+SMART CODE HERE */
-  }//end toString()
+    for(int i = 0; i < data.length; i++){
+      System.out.print(data[i] + " "); // single line
+    }
+  }
 
 
   //return Stringified version of this Object,
