@@ -128,16 +128,17 @@ public class SuperArray
   public void add(int index, int value)
   {
     // see if there's enough room
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(numberElements == data.length){ grow(); }
 
     // shift elements toward the end of the array
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // start at data[numElements] and move to data[numElements] + 1
+    // head down from end to index
 
     // insert new element
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // at index put new thing
 
     // increment numElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // as stated
   }
 
 
