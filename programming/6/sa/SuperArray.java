@@ -133,12 +133,13 @@ public class SuperArray
     // shift elements toward the end of the array
     // start at data[numElements] and move to data[numElements] + 1
     // head down from end to index
+    for(int i = numberElements; i >= index; i--){ data[i + 1] = data[i]; }
 
     // insert new element
-    // at index put new thing
+    data[index] = value;
 
     // increment numElements
-    // as stated
+    numberElements ++;
   }
 
 
