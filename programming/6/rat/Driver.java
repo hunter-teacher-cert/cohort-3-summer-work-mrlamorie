@@ -21,7 +21,7 @@ public class Driver
 
       Rational x = new Rational( 8, 12 );
 
-      Rational failure = new Rational(3, 0); // excpt test
+      // Rational failure = new Rational(3, 0); // excpt test
     
       System.out.println("r: " + r );
       System.out.println("s: " +  s );
