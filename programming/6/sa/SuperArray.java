@@ -153,11 +153,13 @@ public class SuperArray
     int[] newData = new int[newSize];
 
     // copy over all the elements from the old array to the new one
-    /* YOUR SIMPLE+SMART CODE HERE */
-
+    for (int i = 0; i < data.length; i ++){
+      newData[i] = data[i];
+    }
+    
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data = newData
   }//end grow()
 
 }//end class
