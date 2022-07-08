@@ -69,7 +69,7 @@ public class SuperArray
     // increment numberElements
     numberElements ++;
 
-  }//end add()
+  }
 
 
   public boolean isEmpty()
@@ -109,7 +109,7 @@ public class SuperArray
     }
     s = s + "\n";
     return s;
-  }//end debug()
+  }
 
 
   public void remove(int index)
@@ -159,6 +159,6 @@ public class SuperArray
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     data = newData;
-  }//end grow()
+  }
 
 }//end class

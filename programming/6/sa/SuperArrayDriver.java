@@ -50,7 +50,7 @@ public class SuperArrayDriver
     // System.out.println(sa.debug());
     sa.add(5);
     sa.add(2);
-    sa.add(2);
+    sa.add(27);
     sa.add(42);
     System.out.println(sa.debug());
     System.out.println(sa);
