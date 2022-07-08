@@ -11,14 +11,14 @@
    and facilitate mathematical operations with another instance of class Rational.
 
    Basic level (complete all):
-   - toString
-   - default constructor
-   - multiply
+   - toString x
+   - default constructor x
+   - multiply x
    - divide
 
    Intermediate level (complete Basic methods plus these methods):
    - floatValue
-   - overloaded constructor
+   - overloaded constructor x
 
    Advanced level (complete Basic + Intermediate + these methods):
    -
@@ -48,7 +48,8 @@ public class Rational
   // if an invalid denominator is attempted, should print a message and set the number to 0/1
   public Rational( int n, int d )
   {
-     _numerator = n;
+    this();
+    _numerator = n;
     _denominator = d;
   }
 
@@ -58,6 +59,7 @@ public class Rational
   public String toString()
   {
     /* YOUR ELEGANT CODE HERE */
+    return "" + _numerator + "/" + _denominator;
   }
 
 
@@ -66,7 +68,9 @@ public class Rational
   // uses the most precise floating point primitive
   public double floatValue()
   {
-    /* YOUR ELEGANT CODE HERE */
+    double n = _numerator;
+    double d = _denominator;
+    return n/d;
   }
 
 
@@ -78,7 +82,8 @@ public class Rational
   // need not reduce
   public void multiply( Rational r )
   {
-    /* YOUR ELEGANT CODE HERE */
+    _numerator *= r._numerator;
+    _denominator *= r._denominator;
   }
 
 
@@ -86,7 +91,9 @@ public class Rational
   // same as multiply, except operation is division
   public void divide( Rational r )
   {
-    /* YOUR ELEGANT CODE HERE */
+    // t.n/t.d ÷ r.n/r.d = t.n/t.d × r.d/r.n
+    _numerator *= r._denominator;
+    _denominator *= r._numerator;
   }
 
 }//end class
