@@ -118,10 +118,10 @@ public class SuperArray
     // start at index
     // until numberElements -1
     // move i + 1 to i
-   
-
+    for(int i = index; i < numberElements -1; i++){ data[i] = data[i + 1]; }
+    
     // subtract fom numElements;
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements --;
   }
 
 
