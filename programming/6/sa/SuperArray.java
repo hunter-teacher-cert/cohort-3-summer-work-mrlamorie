@@ -117,6 +117,9 @@ public class SuperArray
   public void remove(int index)
   {
     // shift items down to remove the item at index
+    // start at index
+    // until numberElements -1
+    // move i + 1 to i
     /* YOUR SIMPLE+SMART CODE HERE */
 
     // subtract fom numElements;
