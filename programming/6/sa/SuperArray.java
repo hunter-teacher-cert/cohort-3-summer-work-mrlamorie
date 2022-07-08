@@ -97,7 +97,7 @@ public class SuperArray
   public String toString()
   {
     String s = "";
-    for(int i = 0; i < data.length; i++){
+    for(int i = 0; i < numberElements; i++){
       if (i == 0){ s = s + data[i]; }
       else { s = s + ", " + data[i]; }
     }
