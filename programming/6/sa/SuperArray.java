@@ -131,9 +131,9 @@ public class SuperArray
     if(numberElements == data.length){ grow(); }
 
     // shift elements toward the end of the array
-    // start at data[numElements] and move to data[numElements] + 1
+    // start at data[numElements] -1 and move to data[numElements] + 1
     // head down from end to index
-    for(int i = numberElements; i >= index; i--){ data[i + 1] = data[i]; }
+    for(int i = numberElements -1; i >= index; i--){ data[i + 1] = data[i]; }
 
     // insert new element
     data[index] = value;
