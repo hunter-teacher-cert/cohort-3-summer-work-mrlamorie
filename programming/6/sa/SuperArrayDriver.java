@@ -54,6 +54,9 @@ public class SuperArrayDriver
     sa.add(42);
     System.out.println(sa.debug());
     System.out.println(sa);
+    sa.remove(1);
+    System.out.println(sa);
+    System.out.println(sa.debug());
   }//main
 
 }//class SuperArrayDriver

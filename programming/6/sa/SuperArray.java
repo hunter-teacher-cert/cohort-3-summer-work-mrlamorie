@@ -111,7 +111,7 @@ public class SuperArray
     return s;
   }
 
-
+  // should this rebuild a smaller array as well, was not asked for
   public void remove(int index)
   {
     // shift items down to remove the item at index
