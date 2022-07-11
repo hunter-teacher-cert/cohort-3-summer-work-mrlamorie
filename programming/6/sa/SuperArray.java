@@ -1,7 +1,7 @@
 /**
  * SuperArray by Team MarvelvsDC
  * William LaMorie
- * collaborators: First Last, First Last
+ * collaborators: Wayne T,	Suzie S,	Alicia W
  */
 
 /**
@@ -56,7 +56,6 @@ public class SuperArray
     numberElements = 0;
   }
 
-
   // ~~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~
   public void add( int value )
   {
@@ -68,9 +67,7 @@ public class SuperArray
 
     // increment numberElements
     numberElements ++;
-
   }
-
 
   public boolean isEmpty()
   {
@@ -78,12 +75,10 @@ public class SuperArray
     return true; 
   }
 
-
   public int get(int index)
   {
     return data[index];
   }
-
 
   public String toString()
   {
@@ -95,7 +90,6 @@ public class SuperArray
     return s;
   }
 
-
   //return Stringified version of this Object,
   // with extra debugging info
   //(helper method for debugging/development phase)
@@ -104,9 +98,7 @@ public class SuperArray
     String s = "";
     s = "Size: " + this.data.length;
     s = s + " LastItem: " + numberElements + "  Data: ";
-    for (int i = 0; i < numberElements; i++) {
-      s = s + data[i] + ", ";
-    }
+    for (int i = 0; i < numberElements; i++) { s = s + data[i] + ", "; }
     s = s + "\n";
     return s;
   }
@@ -123,7 +115,6 @@ public class SuperArray
     // subtract fom numElements;
     numberElements --;
   }
-
 
   public void add(int index, int value)
   {
@@ -159,7 +150,6 @@ public class SuperArray
     }
     
     // point data to the new array
-    // Q: How does this look when illustrated using encapsulation diagram?
     data = newData;
   }
 

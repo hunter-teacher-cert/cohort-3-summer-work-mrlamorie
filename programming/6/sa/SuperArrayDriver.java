@@ -44,7 +44,7 @@ public class SuperArrayDriver
     sa.remove(15);
     System.out.println(sa);
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    SuperArray sa = new SuperArray(3);
+    SuperArray sa = new SuperArray();
     System.out.println(sa.debug());
     // sa.grow(); // tested, back to private
     // System.out.println(sa.debug());
