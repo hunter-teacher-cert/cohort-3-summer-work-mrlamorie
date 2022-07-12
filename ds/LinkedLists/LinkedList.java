@@ -92,6 +92,7 @@ public class LinkedList{
     if (index == 0) { // base case i = 0
       head = new Node(value, null); // make the new node 
     } else {
+      
       Node current = head; // init to head
       int idx = 1; // track the size of the LL
       
