@@ -10,6 +10,7 @@ public class SanityCheck{
     n1.setNext(n2);
     System.out.println("n1 toString dump at setNext(n2): " + n1);
     n2.setNext(new Node("15"));
+    System.out.println("n2 toString dump at setNext(new Node(15)): " + n2);
     n2 = new Node("20");
     Node n3 = new Node("25",n2);
   }

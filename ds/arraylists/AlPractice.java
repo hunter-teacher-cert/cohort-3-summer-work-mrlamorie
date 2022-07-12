@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 /**
 ALPractice.java
-Owner: William LaMorie
-Collaborators: Théa W,	Maxwell Y
+Owner: William LaMorie  
+Collaborators: Théa W,	Maxwell Y  (Room 3)
 **/
 
 
