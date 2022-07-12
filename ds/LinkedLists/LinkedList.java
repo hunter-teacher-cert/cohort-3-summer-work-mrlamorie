@@ -91,23 +91,23 @@ public class LinkedList{
     
     if (index == 0) { // base case i = 0
       head = new Node(value, null); // make the new node 
-    }
-    
-    Node current = head; // init to head
-    int idx = 1; // track the size of the LL
-    
-    // dig though the list to the index -1
-    while(true){
-      Node last = current; // so we can go back and do codefu
-      current = current.getNext(); // init val of head + 1 then ++
-      if(idx == index){
-        // find it's current next node value, store it
-        Node next = current.getNext(); //find the next value
-        // point last @ new node, and set new node next to next
-        Node newNode = (value, next);
-        last.setNext = newNode;
-      } else { idx ++; } // else incriment // raise an error if outside of bounds?
+    } else {
+      Node current = head; // init to head
+      int idx = 1; // track the size of the LL
       
+      // dig though the list to the index -1
+      while(true){
+        Node last = current; // so we can go back and do codefu
+        current = current.getNext(); // init val of head + 1 then ++
+        if(idx == index){
+          // find it's current next node value, store it
+          Node next = current.getNext(); //find the next value
+          // point last @ new node, and set new node next to next
+          Node newNode = new Node(value, next);
+          last.setNext(newNode);
+        } else { idx ++; } // else incriment // raise an error if outside of bounds?
+        
+      }
     }
   }
 
