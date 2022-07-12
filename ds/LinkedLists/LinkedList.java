@@ -88,10 +88,18 @@ public class LinkedList{
 
   */
   public void add(int index, String value){
+    
+    if (index == 0) { // base case i = 0
+      head = new Node(value, null); // make the new node 
+    }
+    int idx = 0; // start tracking @ 0
+
+    
     // dig though the list to the index -1
       // find it's current next value, store it
       // add in the new node at index
       // set the new node's next to the old next node
+      // send an error if index > number of items on LL?? - Would ER add any extra insight?
   }
 
   /**
