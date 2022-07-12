@@ -44,11 +44,15 @@ public class LinkedList{
   Adds a new node containing value to the front of the list.
   */
   public void add(String value){
-
+    // make the new thing the head.
+    // link it to the old head or the old head to it, functionally
+    Node newHead = new Node(value);
+    newHead.setNext(head);
+    head = newHead;
   }
 
   /**
-  returns the number of elements in the lsit
+  returns the number of elements in the list
   */
   public int size(){
     return 0;
