@@ -1,5 +1,11 @@
 import java.io.*;
 import java.util.*;
+/**
+ALPractice.java
+Owner: William LaMorie
+Collaborators: Théa W,	Maxwell Y
+**/
+
 
 /** Methods to write
 
