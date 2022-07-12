@@ -88,6 +88,10 @@ public class LinkedList{
 
   */
   public void add(int index, String value){
+    // dig though the list to the index -1
+      // find it's current next value, store it
+      // add in the new node at index
+      // set the new node's next to the old next node
   }
 
   /**
