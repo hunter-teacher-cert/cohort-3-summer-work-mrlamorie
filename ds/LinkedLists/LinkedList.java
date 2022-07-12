@@ -46,16 +46,30 @@ public class LinkedList{
   public void add(String value){
     // make the new thing the head.
     // link it to the old head or the old head to it, functionally
-    Node newHead = new Node(value);
-    newHead.setNext(head);
+  
+    Node newHead = new Node(value, head);
     head = newHead;
+    // should cover the case where head = null
+
   }
 
   /**
   returns the number of elements in the list
   */
   public int size(){
-    return 0;
+
+    // base case size is 0
+    if(head == null){ return 0; }
+
+    // otherwise, go though LL
+    int s = 1; // track the size of the LL
+    Node current = head; // init to head
+    
+    while(true){
+      current = current.getNext(); // dig though the LL
+      if(current == null) { return s;} // if the 'current' is non item member return
+      else { s ++; } // else incriment
+    }
   }
 
   /**
