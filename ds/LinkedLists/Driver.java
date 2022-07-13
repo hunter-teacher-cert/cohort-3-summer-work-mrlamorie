@@ -1,6 +1,12 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ALPractice.java
+Owner: William LaMorie  
+Collaborators: 
+**/
+
 public class Driver{
   public static void main(String[] args) {
     LinkedList l = new LinkedList();

@@ -2,6 +2,12 @@ import java.io.*;
 import java.util.*;
 
 /**
+ALPractice.java
+Owner: William LaMorie  
+Collaborators: 
+**/
+
+/**
 
    For all attempted methods, make sensible decisions for error and
    edge cases (such as indexing out of bounds).
@@ -266,8 +272,10 @@ public class LinkedList{
 
   /** 
   @param {int} index - an index to be checked for being within the range of the LL
+
   This is a pass though function that generates an error if the index is out of 
   range for the LL
+
   @return {int} the same index
   */
   private int indexCheck(int index){
