@@ -21,6 +21,8 @@ public class Node{
     this.next = next;
   }
 
+  /* Methods */
+  
   public String getData(){
     return data;
   }
