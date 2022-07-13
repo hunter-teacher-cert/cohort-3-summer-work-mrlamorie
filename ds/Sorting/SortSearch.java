@@ -69,7 +69,7 @@ public class SortSearch{
     */
     public int findSmallestIndex(int start){
 	    int smallIndex = 0; // change to start's value?
-
+      
       // search from start to the end of the array
       // assume the item at start is the smallest.
       // if a new item is smaller then update smallIndex

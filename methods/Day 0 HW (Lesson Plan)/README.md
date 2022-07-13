@@ -9,3 +9,5 @@
 * Life Simulation Rubric is the student rubric for the lesson plan
 
 * Life Game Build 2 is an example code for the project & lesson arc
+
+* Project Planning Template - blank version of the template used for Life Simulation Project b/c group had intrest in this planning document.
