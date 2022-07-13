@@ -8,15 +8,15 @@ import java.util.*;
    
    Basic
    -----
-   add(string value)
+   add(string value) x
    get(int index);
    indexOf(String value);
    
    
    Intermediate (at least add, size + one of the other two)
    ------------
-   add(int index,String value)
-   size()
+   add(int index,String value) x
+   size() x
    toString()
    toArray()
 
@@ -136,6 +136,18 @@ public class LinkedList{
 
   */
   public void get(int index){
+    // if the head is null throw an error
+    if(head == null){ return 0; }
+
+    // otherwise, go though LL
+    int s = 1; // track the size of the LL
+    Node current = head; // init to head
+    
+    while(true){
+      current = current.getNext(); // dig though the LL
+      if(current == null) { return s;} // if the 'current' is non item member return
+      else { s ++; } // else incriment
+    }
   }
 
   /**
