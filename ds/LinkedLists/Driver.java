@@ -20,6 +20,14 @@ public class Driver{
     //System.out.println(l.get(3432535)); //IOOB error check // PASSED
     // get testing & correct use testing for above
     System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2) + " " + l.get(3));
+    l.remove(1); // test of remove at 1
+    System.out.println(l.size());
+    System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2));
+    l.remove(0);
+    System.out.println(l.get(0) + " " + l.get(1));
+    l.add("A");
+    l.add(1, "B"); // reset to test case
+    System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2) + " " + l.get(3));
     
   }
 }
