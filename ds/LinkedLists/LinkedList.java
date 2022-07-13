@@ -135,19 +135,33 @@ public class LinkedList{
   Returns the String in the node at location index.
 
   */
-  public void get(int index){
-    // if the head is null throw an error
-    if(head == null){ return 0; }
-
-    // otherwise, go though LL
-    int s = 1; // track the size of the LL
-    Node current = head; // init to head
+  public String get(int index){
+    // edge cases - empty LL, i = 0, i < 0, i > size -1
     
-    while(true){
-      current = current.getNext(); // dig though the LL
-      if(current == null) { return s;} // if the 'current' is non item member return
-      else { s ++; } // else incriment
+    if(head == null){ // if empty thow exception
+      throw new IndexOutOfBoundsException("LinkedList is empty."); }
+    
+    if (index < 0){ // negative indexing
+      throw new IndexOutOfBoundsException("Negative indexing not supported.");
     }
+
+    if (index >= size()){ // out of bounds
+      throw new IndexOutOfBoundsException("Size: " + size() + " Index: " + index);
+    }
+
+    // go through the list, return value if i = index
+    Node current = head;
+    String retStr = ""; // to avoid missing return statement error
+    for (int i = 0; i <= index; i++){
+      
+      if(i == index){
+        retStr = current.getData(); // found it, put in container
+      }
+      else{
+        current = current.getNext(); // keep looking
+      }
+    }
+    return retStr;
   }
 
   /**
