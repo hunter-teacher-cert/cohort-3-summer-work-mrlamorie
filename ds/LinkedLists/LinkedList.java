@@ -10,7 +10,7 @@ import java.util.*;
    -----
    add(string value) x
    get(int index); x
-   indexOf(String value);
+   indexOf(String value); x
    
    
    Intermediate (at least add, size + one of the other two)
@@ -237,7 +237,15 @@ public class LinkedList{
 
   */
   public String[] toArray(){
-    return null;
+    String[] retArr = new String[size()]; // make a new String array of size
+    
+    Node current = head; // start up a node tracker
+    for(int i = 0; i < size(); i++){
+      retArr[i] = current.getData();
+      current = current.getNext();
+    }
+
+    return retArr;
   }
 
   /**
