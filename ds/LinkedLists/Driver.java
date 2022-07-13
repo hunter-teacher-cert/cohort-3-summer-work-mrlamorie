@@ -28,6 +28,9 @@ public class Driver{
     l.add("A");
     l.add(1, "B"); // reset to test case
     System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2) + " " + l.get(3));
-    
+    l.remove(3);
+    System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2));
+    l.add(3, "D");
+    System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2) + " " + l.get(3));
   }
 }
