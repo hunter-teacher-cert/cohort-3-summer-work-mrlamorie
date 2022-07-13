@@ -141,7 +141,7 @@ public class LinkedList{
     if(head == null){ // if empty thow exception
       throw new IndexOutOfBoundsException("LinkedList is empty."); }
     
-    index = indexCheck(index);
+    index = indexCheck(index); //Standard EC
 
     // go through the list, return value if i = index
     Node current = head;
@@ -173,7 +173,26 @@ public class LinkedList{
     if(head == null){ // if empty thow exception
       throw new IndexOutOfBoundsException("LinkedList is empty."); }
     
-    index = indexCheck(index);
+    index = indexCheck(index); // standard EC
+
+    // will need to track the current node to get it's next and the last node
+    // so that it may be updated with the current node's next
+
+    // if the index is 0; set the head to the current head's next.
+    if(index == 0){
+      head = head.getNext();
+    } else {
+      Node last = head;
+      Node current = head.getNext();
+      for(int i = 1; i < size(); i++){
+        if(i == index){
+          last.setNext(current.getNext()); // just skip past
+        } else {
+          last = current;
+          current = current.getNext();
+        }
+      }
+    }
   }
 
   /**
