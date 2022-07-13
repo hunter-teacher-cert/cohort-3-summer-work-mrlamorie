@@ -85,18 +85,26 @@ public class SortSearch{
       Implement the insertion sort algorithm by sorting the ArrayList data in place.
     */
     public void sort(){
-      // start at index 1
-      // for each item in list
-        // store in a temp
-
-          // loop down though the array from temp to (including) 0 as long as temp is
-          // less than the current value
-          // bump up the current value to index +1 
-      
-        // insert temp at last current index
+      // start at index 1, for each item in list
+      for(int i = 1; i < data.size(); i++){
         
+        int temp = data.get(i); // store in a temp
+        int pos = i -1; // set to the index below moving number
+
+        // loop down though the array from temp to (including) 0 as long as temp is
+        // less than the current value data[pos] 
+        // could be done with a for & if as well
+        while((pos >= 0) && temp < data.get(pos)){
+          data.set(pos + 1, data.get(pos));  // bump up the current value to index +1
           
-            
+          pos --; // bring the position down  (this can go to -1, fix below)
+        }
+        // insert temp at last current index above pos (pos will go to -1)
+        // if the temp is the lowest value but that is okay, becuase we are putting
+        // the temp at the pos + 1.
+        data.set(pos + 1, temp);
+        
+      }
 
     }
 
