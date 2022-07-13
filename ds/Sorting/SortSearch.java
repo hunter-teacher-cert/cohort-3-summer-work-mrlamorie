@@ -6,13 +6,13 @@ import java.util.*;
 Sort Project:
 
 Part 1:  (BASIC)
-  1. Analyze the two constructors - try to figure out how they work.
+  1. Analyze the two constructors - try to figure out how they work. x
   2. Compile and run the program (SortProjectDriver.java and SortProject.java) 
-  and confirm the behavior of the constructors.
+  and confirm the behavior of the constructors. x
 
   Part 2: (BASIC)
-  1. Read the description of findSmallestIndex and complete the method.
-  2. Uncomment the lines in SortProjectDriver to test.
+  1. Read the description of findSmallestIndex and complete the method. x
+  2. Uncomment the lines in SortProjectDriver to test. x
 
   Part 3: (INTERMEDIATE)
   1. Complete the sort method - read comments for description
@@ -85,7 +85,18 @@ public class SortSearch{
       Implement the insertion sort algorithm by sorting the ArrayList data in place.
     */
     public void sort(){
+      // start at index 1
+      // for each item in list
+        // store in a temp
 
+          // loop down though the array from temp to (including) 0 as long as temp is
+          // less than the current value
+          // bump up the current value to index +1 
+      
+        // insert temp at last current index
+        
+          
+            
 
     }
 
