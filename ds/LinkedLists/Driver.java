@@ -9,5 +9,7 @@ public class Driver{
     System.out.println(l.size()); // 1 item test
     l.add("B"); // add 1 param test
     System.out.println(l.size()); // 2+ item test
+    l.add(1, "C"); // overreiden add insert test
+    System.out.println(l.size()); // 3 item test
   }
 }

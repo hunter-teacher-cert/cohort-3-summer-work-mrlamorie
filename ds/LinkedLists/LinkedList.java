@@ -88,25 +88,44 @@ public class LinkedList{
 
   */
   public void add(int index, String value){
+
+    // edge cases - index = 0; index == length; index > length; negative index
+    
+    if (index < 0){ // negative indexing
+      throw new IndexOutOfBoundsException("Negative indexing not supported.");
+    }
     
     if (index == 0) { // base case i = 0
       head = new Node(value, null); // make the new node 
+      
     } else {
       
-      Node current = head; // init to head
+      Node last = head; // init to head
       int idx = 1; // track the size of the LL
+      boolean searching = true; // to stop in cas found
+
       
       // dig though the list to the index -1
-      while(true){
-        Node last = current; // so we can go back and do codefu
-        current = current.getNext(); // init val of head + 1 then ++
-        if(idx == index){
-          // find it's current next node value, store it
-          Node next = current.getNext(); //find the next value
-          // point last @ new node, and set new node next to next
-          Node newNode = new Node(value, next);
+      while(searching){
+        if(last.getNext() == null && idx < index){
+          
+          // raise an error if the index is more than 1 greater than current
+          // 1 greater works fine because that is an add to end.
+          int size = idx + 1;
+          throw new IndexOutOfBoundsException("Size: " + size + " Index: " + index);
+        }
+        if(idx == index){ // found the correct spot
+          // make new node, linking to current next.
+          Node newNode = new Node(value, last.getNext());
           last.setNext(newNode);
-        } else { idx ++; } // else incriment // raise an error if outside of bounds?
+          searching = false;
+
+        } else { // else increment, move last tracker
+          idx ++; 
+          last = last.getNext();
+          
+          
+        } 
         
       }
     }
