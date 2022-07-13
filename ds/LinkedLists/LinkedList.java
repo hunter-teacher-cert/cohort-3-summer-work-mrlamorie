@@ -23,7 +23,7 @@ import java.util.*;
    
    Challenge
    --------
-   remove(int index);
+   remove(int index); x
    
 */
 
@@ -139,7 +139,8 @@ public class LinkedList{
     // edge cases - empty LL, i = 0, i < 0, i > size -1
     
     if(head == null){ // if empty thow exception
-      throw new IndexOutOfBoundsException("LinkedList is empty."); }
+      throw new IndexOutOfBoundsException("LinkedList is empty."); 
+    }
     
     index = indexCheck(index); //Standard EC
 
@@ -171,7 +172,8 @@ public class LinkedList{
   */
   public void remove(int index){
     if(head == null){ // if empty thow exception
-      throw new IndexOutOfBoundsException("LinkedList is empty."); }
+      throw new IndexOutOfBoundsException("LinkedList is empty."); 
+    }
     
     index = indexCheck(index); // standard EC
 
@@ -206,7 +208,23 @@ public class LinkedList{
 
   */
   public int indexOf(String value){
-    return 0;
+    if(head == null){ // if empty thow exception
+      throw new IndexOutOfBoundsException("LinkedList is empty."); 
+    }
+
+    Node current = head;
+    int index = -1; // for error checking && transveral halting without break
+    
+    for (int i = 0; i < size(); i ++){
+      if((current.getData() == value) && index == -1){ // only happens once
+        index = i;
+      }
+    }
+    if(index == -1){ // not found, throw an error
+      throw new IllegalArgumentException("Value not in LinkedList");
+    }
+    
+    return index;
   }
 
   /**
