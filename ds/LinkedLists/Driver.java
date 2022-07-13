@@ -32,5 +32,7 @@ public class Driver{
     System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2));
     l.add(3, "D");
     System.out.println(l.get(0) + " " + l.get(1) + " " + l.get(2) + " " + l.get(3));
+    System.out.println(l.indexOf("C")); // tested index of
+    //System.out.println(l.indexOf("FAIL")); // tested not on LL error //PASSED
   }
 }

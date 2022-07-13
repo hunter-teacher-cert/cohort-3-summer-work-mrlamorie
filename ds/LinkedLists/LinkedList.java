@@ -219,6 +219,7 @@ public class LinkedList{
       if((current.getData() == value) && index == -1){ // only happens once
         index = i;
       }
+      current = current.getNext();
     }
     if(index == -1){ // not found, throw an error
       throw new IllegalArgumentException("Value not in LinkedList");
