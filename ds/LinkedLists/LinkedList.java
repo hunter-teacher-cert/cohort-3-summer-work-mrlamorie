@@ -9,7 +9,7 @@ import java.util.*;
    Basic
    -----
    add(string value) x
-   get(int index);
+   get(int index); x
    indexOf(String value);
    
    
@@ -141,13 +141,7 @@ public class LinkedList{
     if(head == null){ // if empty thow exception
       throw new IndexOutOfBoundsException("LinkedList is empty."); }
     
-    if (index < 0){ // negative indexing
-      throw new IndexOutOfBoundsException("Negative indexing not supported.");
-    }
-
-    if (index >= size()){ // out of bounds
-      throw new IndexOutOfBoundsException("Size: " + size() + " Index: " + index);
-    }
+    index = indexCheck(index);
 
     // go through the list, return value if i = index
     Node current = head;
@@ -176,6 +170,10 @@ public class LinkedList{
   "a"->"b"->"d"->"e"
   */
   public void remove(int index){
+    if(head == null){ // if empty thow exception
+      throw new IndexOutOfBoundsException("LinkedList is empty."); }
+    
+    index = indexCheck(index);
   }
 
   /**
@@ -211,5 +209,21 @@ public class LinkedList{
     return "";
   }
 
+  /** 
+  @param {int} index - an index to be checked for being within the range of the LL
+  This is a pass though function that generates an error if the index is out of 
+  range for the LL
+  @return {int} the same index
+  */
+  private int indexCheck(int index){
+    if (index < 0){ // negative indexing
+      throw new IndexOutOfBoundsException("Negative indexing not supported.");
+    }
+
+    if (index >= size()){ // out of bounds
+      throw new IndexOutOfBoundsException("Size: " + size() + " Index: " + index);
+    }
+    return index;
+  }
 
 }
