@@ -17,8 +17,8 @@ import java.util.*;
    ------------
    add(int index,String value) x
    size() x
-   toString()
-   toArray()
+   toString() x
+   toArray() x
 
    
    Challenge
@@ -250,9 +250,18 @@ public class LinkedList{
 
   /**
   Return a string representation of the list
+  I formated this to look like Node -> Node -> Node ... 
   */
   public String toString(){
-    return "";
+    String retStr = "";
+    Node current = head; // start up a node tracker
+    for(int i = 0; i < size(); i++){
+      if (i > 0 ){ retStr += " -> "; }
+      retStr += current.getData();
+      current = current.getNext();
+    }
+    
+    return retStr;
   }
 
   /** 

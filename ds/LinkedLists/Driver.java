@@ -41,5 +41,7 @@ public class Driver{
     }
     System.out.println();
     // toArray test end 
+    // test toString()
+    System.out.println(l);
   }
 }
