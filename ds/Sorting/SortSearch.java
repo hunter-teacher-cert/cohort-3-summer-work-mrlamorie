@@ -156,7 +156,7 @@ public class SortSearch{
         //   if the item is at data.get(middle), return middle
         if(data.get(mid) == value){ // check first for return to break loop
           return mid;
-        } else if (high == low) {  // edge case - not found
+        } else if (high <= low) {  // edge case - not found
           // high can only equal low if item not in list or if the item is
           // very last number searched. If it is the last number searched
           // then the mid also == high == low and we checked the mid before
@@ -180,9 +180,10 @@ public class SortSearch{
 
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
       
-      // refer to class discussion
+      // we should search until found or not found. Found is mid value = val
+      // not found is high <= low
       
-      return 0;
+      return -1; // element not found
     }
     
 	
