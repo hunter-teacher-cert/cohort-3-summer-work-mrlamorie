@@ -22,7 +22,7 @@ Part 1:  (BASIC)
 
 Search Project:
   1. Complete the linear search (BASIC) x
-  2. Complete the binary search (Intermediate)
+  2. Complete the binary search (Intermediate) x
   3. Complete the recursive version of binary search (Advanced)
 */
 
@@ -63,11 +63,13 @@ public class SortSearch{
       return the index of the ArrayList data from index start to the end
       Example, if the arraylist has:
       5,3,10,6,8
-      if start was 2 (start at index 2, value 10) then it woudl return 3 which is 
+      if start was 2 (start at index 2, value 10) then it would return 3 which is 
       the index of the value 6 which is the index with the smallest value from 
-      start to end
+      start of arrayList to end
     */
     public int findSmallestIndex(int start){
+      // TODO: add some error throws - start < 0, start >= len?
+      
 	    int smallIndex = start; // assume the item at start is the smallest.
       
       // search from start to the end of the array
@@ -77,7 +79,7 @@ public class SortSearch{
         }
       }
       
-	    return smallIndex;
+	    return smallIndex; // index from start of AL to end
     }
 
 
