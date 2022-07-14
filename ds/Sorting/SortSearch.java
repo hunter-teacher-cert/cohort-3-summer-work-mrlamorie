@@ -180,9 +180,18 @@ public class SortSearch{
 
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
       
+      // condition logic
       // we should search until found or not found. Found is mid value = val
-      // not found is high <= low
+      // not found is high <= low or high < low? hmm...
+      // so still searching case is high > low or high >= low
+        // make a middle of current range
       
+        // return if found
+      
+        // else if mid greater than value search high
+        // else search low
+      
+      // outside of conditonal, where not found is true
       return -1; // element not found
     }
     
