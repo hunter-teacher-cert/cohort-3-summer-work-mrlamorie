@@ -1,0 +1,50 @@
+/*
+p--+
+   |
+   v (call me p)   (I have no name)
+  +-----+---+        +-----+-----+    +-----+-----+     +-----+-----+ 
+  | 5   |   |------->| 10  |     |--->| 15  |     |---->| 20  |     | 
+  |     |   |        |     |     |    |     |     |     |     |     | 
+  +-----+---+        +-----+-----+    +-----+-----+     +-----+-----+ 
+  data   next   getNext for p give me this
+/*
+
+//1.
+// Create a new Node variable 
+// this has a data of null and a next of null
+Node p2 = new Node(); // we have a blank new node
+
+// set it to point to the node with the 10 in it.
+p2.setNext(p.getNext()); // set the pointer to the one with 10
+
+// for demo only if I wanted to add new data to a node
+// p2.setNext( we want something new here);
+// p2.setNext(Node temp = new Node(35))
+
+//2. 
+// Create a new Node variable and instantiate it to a new Node with a value of 30.
+// this will have a data of 30 and a next of null
+Node p3 = new Node(30);
+
+//3.
+// Write the code to insert this new Node between the 10 and the 15
+/*
+p--+
+   |
+   v (call me p)   (I have no name)
+  +-----+---+        +-----+-----+    +-----+-----+     +-----+-----+ 
+  | 5   |   |------->| 10  |     |    | 15  |     |---->| 20  |     | 
+  |     |   |        |     |     |    |     |     |     |     |     | 
+  +-----+---+        +-----+-----+    +-----+-----+     +-----+-----+ 
+                              |        ^
+  data   next                 \->  p3 -/
+/*
+// p(5) -points to -> unnamed(10) - points to -> unnamed(15) - points to -> unnamed(20)
+// change to ->
+// p(5) -points to -> unnamed(10) - points to ->  p3(30) - points to ->unnamed(15) - points to -> unnamed(20)
+
+p3.setNext(p.getNext().getNext()); // links the unnamed(25) to p3's next
+// p3 set next to(p's next's next);
+
+p.getNext().setNext(p3); // set's unnamed(10)'s next to p3.
+// set p's next's next to p3
