@@ -48,3 +48,9 @@ p3.setNext(p.getNext().getNext()); // links the unnamed(25) to p3's next
 
 p.getNext().setNext(p3); // set's unnamed(10)'s next to p3.
 // set p's next's next to p3
+
+// for the question Z asked this pretty much the same as doing n = n +1;
+// we have n and we know the thing we want is the next of n;
+// we set n to n's node's next
+n = n.getNext();
+// n".getNext" tells what the next node is

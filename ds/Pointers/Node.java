@@ -15,12 +15,13 @@ public class Node{
 
   }
 
-
   public Node(String data, Node next){
     this.data = data;
     this.next = next;
   }
 
+  /* Methods */
+  
   public String getData(){
     return data;
   }

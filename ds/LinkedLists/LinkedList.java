@@ -257,6 +257,8 @@ public class LinkedList{
   /**
   Return a string representation of the list
   I formated this to look like Node -> Node -> Node ... 
+  I did not use the tostring of the node because unless I am mistaken, it gives a hanging
+  arrow
   */
   public String toString(){
     String retStr = "";
