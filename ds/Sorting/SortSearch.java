@@ -69,6 +69,7 @@ public class SortSearch{
     */
     public int findSmallestIndex(int start){
       // TODO: add some error throws - start < 0, start >= len?
+      start = indexCheck(start);
       
 	    int smallIndex = start; // assume the item at start is the smallest.
       
@@ -189,12 +190,31 @@ public class SortSearch{
         // return if found
       
         // else if mid greater than value search high
+      
         // else search low
       
       // outside of conditonal, where not found is true
       return -1; // element not found
     }
-    
+
+    /** 
+    @param {int} index - an index to be checked for being within the range of the LL
+  
+    This is a pass though function that generates an error if the index is out of 
+    range for the LL
+  
+    @return {int} the same index
+    */
+    private int indexCheck(int index){
+      if (index < 0){ // negative indexing
+        throw new IndexOutOfBoundsException("Negative indexing not supported.");
+      }
+  
+      if (index >= data.size()){ // out of bounds
+        throw new IndexOutOfBoundsException("Size: " + data.size() + " Index: " + index);
+      }
+      return index;
+    }
 	
     public String toString(){
 
