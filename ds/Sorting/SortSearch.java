@@ -122,8 +122,16 @@ public class SortSearch{
       This algorithm works on any ArrayList.
     */
     public int linearSearch(int value){
-	
-	    return 0; // replace this return
+	    int retVal = -1; // init return to base case
+
+      int i = 0;  
+      // I'm starting to like while loops more for loops with conditionals
+      while((i < data.size()) && (retVal == -1)){
+        if(data.get(i) == value){ retVal = i; }
+        i++;
+      }
+      
+	    return retVal; // replace this return
     }
     
     /**
