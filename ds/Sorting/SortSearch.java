@@ -15,13 +15,13 @@ Part 1:  (BASIC)
   2. Uncomment the lines in SortProjectDriver to test. x
 
   Part 3: (INTERMEDIATE)
-  1. Complete the sort method - read comments for description
-  2. Uncomment the lines in sortProjectDriver to test.
+  1. Complete the sort method - read comments for description x
+  2. Uncomment the lines in sortProjectDriver to test. x
 
 
 
 Search Project:
-  1. Complete the linear search (BASIC)
+  1. Complete the linear search (BASIC) x
   2. Complete the binary search (Intermediate)
   3. Complete the recursive version of binary search (Advanced)
 */
@@ -141,13 +141,33 @@ public class SortSearch{
     */
     public int binarySearch(int value){
 
+      // assuming we are not looking for the first occurance, just the first one
+      // found.
+      
 	    // create assign variables  representing the high, low and middle indices 
+      int low = 0;  // start of AL
+      int high = data.size() -1; // end of AL
+      int mid = (low + high) /2; // init to middle of AL
+      
 	    // while we're not done:
-	    //   if the item is at data.get(middle), return middle
-	    //   otherwise, update high, low, and middle
+      while(true){
+        //   if the item is at data.get(middle), return middle
+        if(data.get(mid) == value){ // check first for return to break loop
+          return mid;
+        } else if (high == low) {  // edge case - not found
+          // high can only equal low if item not in list or if the item is
+          // very last number searched. If it is the last number searched
+          // then the mid also == high == low and we checked the mid before
+          // this with a return, so this should never cause an issue
+          return -1; // consistent with lin above
+        } else if (data.get(mid) > value){ // too far right
+          high = mid -1; // mid was wrong too so we can exclude it
+        } else { // too far left
+          low = mid +1; // mid was wrong too so we can exclude it
+        }
+        mid = (low + high) /2;  //update mid to new range	      
+      }
 
-	    return 0;
-	    
     }
     
     /**
