@@ -183,18 +183,34 @@ public class SortSearch{
       
       // condition logic
       // we should search until found or not found. Found is mid value = val
-      // not found is high <= low or high < low? hmm...
+      // not found is high <= low or high < low? it's < because = could == mid
       // so still searching case is high > low or high >= low
-        // make a middle of current range
-      
+      if(highIndex >= lowIndex){
+        // make a middle of current range (low will move down if low, up if high)
+        // and same with high so the midpoint will always be the  low + (.5 total)
+        int mid = lowIndex + (highIndex - lowIndex) /2;
+        
         // return if found
-      
-        // else if mid greater than value search high
-      
+        if(data.get(mid) == value){ return mid; } // don't hate me for my 1 line conditions
+        
+        // else if mid less than value search high
+        if(data.get(mid) < value){
+          // +1 to mid because it's not mid...and exit recurse
+          return binarySearchRecursive(value, mid + 1, highIndex);
+        }
         // else search low
-      
+        return binarySearchRecursive(value, lowIndex, mid - 1);
+      }
       // outside of conditonal, where not found is true
       return -1; // element not found
+    }
+
+    /**
+      A helper function to return the size of the datat struct
+      @return {int} the data.size()
+    */
+    public int size(){
+      return data.size();
     }
 
     /** 
