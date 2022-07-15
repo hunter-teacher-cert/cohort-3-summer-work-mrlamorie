@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.*;
 
 /**
-ALPractice.java
+LinkedList.java
 Owner: William LaMorie  
-Collaborators: 
+Collaborators: Théa W, Maxwell Y, Jerusha T
 **/
 
 /**
@@ -69,9 +69,9 @@ public class LinkedList{
 
     // otherwise, go though LL
     int s = 1; // track the size of the LL
-    Node current = head; // init to head
+    Node current = head; // init to head (walker in example they added)
     
-    while(true){
+    while(true){ //could be while != null and in that case s = 0 above
       current = current.getNext(); // dig though the LL
       if(current == null) { return s;} // if the 'current' is non item member return
       else { s ++; } // else incriment
@@ -151,6 +151,7 @@ public class LinkedList{
     index = indexCheck(index); //Standard EC
 
     // go through the list, return value if i = index
+    // would have been nicer with a while loop
     Node current = head;
     String retStr = ""; // to avoid missing return statement error
     for (int i = 0; i <= index; i++){
@@ -258,7 +259,7 @@ public class LinkedList{
   Return a string representation of the list
   I formated this to look like Node -> Node -> Node ... 
   I did not use the tostring of the node because unless I am mistaken, it gives a hanging
-  arrow
+  arrow and I did not like the look of it
   */
   public String toString(){
     String retStr = "";
