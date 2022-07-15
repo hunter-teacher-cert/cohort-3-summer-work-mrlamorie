@@ -50,9 +50,9 @@ public class LinkedList{
   Adds a new node containing value to the front of the list.
   */
   public void add(String value){
+    
     // make the new thing the head.
     // link it to the old head or the old head to it, functionally
-  
     Node newHead = new Node(value, head);
     head = newHead;
     // should cover the case where head = null
