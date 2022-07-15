@@ -102,7 +102,10 @@ public class LinkedList{
     }
     
     if (index == 0) { // base case i = 0
-      head = new Node(value, null); // make the new node 
+      
+      Node temp = new Node(value, head); // make the new node 
+      
+      head = temp;
       
     } else {
       
