@@ -1,5 +1,5 @@
-language = "bash"
-run = "cd ds/LinkedList; javac *java; java Driver"
+language = "java10"
+run = "cd ds/Sorting; javac *java; java SortSearchDriver"
 
 #"cd ds/Pointers; javac Driver.java Node.java; java Driver"
 

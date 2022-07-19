@@ -1,0 +1,51 @@
+William LaMorie
+Team 3 :: <roster> Jing Xue, Wayne Tobias
+Methods - Summer 2022
+
+CODE TRACING in the classroom
+======================================
+
+
+PROS:
+---------------------------------------
+Helps to understand what is going on in the code.
+Can be used to show what's going on the stack, or in execution
+Shows the students how the computer is thinking
+Gives some students an "Ah-ha" moment if they have a point of confusion
+
+
+CONS:
+---------------------------------------
+Some tracings are too long to fit into a 50-minute lesson. 
+Students can become lost in the procedures
+Can drive some students "off the rails" in confusion
+Some students don't see the connection to the code / the value of the exercise
+
+BEST FOR:
+---------------------------------------
+Introducing some more advanced code motiffs
+Reinforce an idea in class - to illustrate an algorithm 
+To make computer / students' thinking visible
+
+
+LEAST-SUITED TO:
+---------------------------------------
+Places where other concepts need to be shown in different ways with diagrams - EG - Linked list
+Something where you have to follow more function call than 1 or 2
+
+
+
+PROVEN PRO-TIPS:
+---------------------------------------
+
+Showing how the hand trace matches/or can be different from a computer generated trace
+Seeing other groups methods for dislaying the tracing (psuedo-code, trees)
+
+
+RESOURCES:
+---------------------------------------
+https://pythontutor.com/render.html#mode=display  Works well for computer generated tracing
+online visualizer: https://cscircles.cemc.uwaterloo.ca/java_visualize/
+
+OTHER:
+---------------------------------------
