@@ -1,2 +1,14 @@
 language = "bash"
-run = ""
+run = "cd ds/LinkedList; javac *java; java Driver"
+
+#"cd ds/Pointers; javac Driver.java Node.java; java Driver"
+
+#"cd programming/pre/8; javac *java; java Craps 8"
+
+#"cd ds/arraylists; javac *java; java AlPractice"
+
+#language = "bash"
+#run = ""cd programming/pre/8; javac *java; java Craps 8""
+
+
+#"cd programming/6/sa; javac *java; java SuperArrayDriver"
