@@ -41,7 +41,7 @@ public class SortSearchDriver {
     System.out.print("Index of 21: ");
 	  System.out.println(ss.linearSearch(21));
     long endTime = System.nanoTime();
-    System.out.println("Time to execute test series with lin:" + ((endTime - startTime)/1000));
+    System.out.println("Time to execute test series with lin: " + ((endTime - startTime)/1000) +"ms");
     
     System.out.println("------------------bin1 test------------------");
     System.out.println(ss);
@@ -53,7 +53,7 @@ public class SortSearchDriver {
     System.out.print("Index of 21: ");
     System.out.println(ss.binarySearch(21));
     endTime = System.nanoTime();
-    System.out.println("Time to execute test series with bin1:" + ((endTime - startTime)/1000));
+    System.out.println("Time to execute test series with bin1: " + ((endTime - startTime)/1000) + "ms");
     System.out.println();
     
     System.out.println("------------------bin2 test------------------");
@@ -66,7 +66,7 @@ public class SortSearchDriver {
     System.out.print("Index of 21: ");
     System.out.println(ss.binarySearchRec(21));
     endTime = System.nanoTime();
-    System.out.println("Time to execute test series with bin1:" + ((endTime - startTime)/1000));
+    System.out.println("Time to execute test series with bin2: " + ((endTime - startTime)/1000) + "ms");
 	      
 
   }
