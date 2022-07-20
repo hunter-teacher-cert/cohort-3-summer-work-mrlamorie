@@ -94,17 +94,17 @@ public class SortSearch{
         int temp = data.get(i); // store in a temp
         int pos = i -1; // set to the index below moving number
 
-        // loop down though the array from temp to (including) 0 as long as temp is
+        /* loop down though the array from temp to (including) 0 as long as temp is
         // less than the current value data[pos] 
-        // could be done with a for & if as well
+        // could be done with a for & if as well */
         while((pos >= 0) && temp < data.get(pos)){
           data.set(pos + 1, data.get(pos));  // bump up the current value to index +1
           
           pos --; // bring the position down  (this can go to -1, fix below)
         }
-        // insert temp at last current index above pos (pos will go to -1)
+        /* insert temp at last current index above pos (pos will go to -1)
         // if the temp is the lowest value but that is okay, becuase we are putting
-        // the temp at the pos + 1.
+        // the temp at the pos + 1. */
         data.set(pos + 1, temp);
         
       }
@@ -158,10 +158,10 @@ public class SortSearch{
         if(data.get(mid) == value){ // check first for return to break loop
           return mid;
         } else if (high <= low) {  // edge case - not found
-          // high can only equal low if item not in list or if the item is
+          /* high can only equal low if item not in list or if the item is
           // very last number searched. If it is the last number searched
           // then the mid also == high == low and we checked the mid before
-          // this with a return, so this should never cause an issue
+          // this with a return, so this should never cause an issue */
           return -1; // consistent with lin above
         } else if (data.get(mid) > value){ // too far right
           high = mid -1; // mid was wrong too so we can exclude it
@@ -181,13 +181,13 @@ public class SortSearch{
     */
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
       
-      // condition logic
+      /* condition logic
       // we should search until found or not found. Found is mid value = val
       // not found is high <= low or high < low? it's < because = could == mid
-      // so still searching case is high > low or high >= low
+      // so still searching case is high > low or high >= low */
       if(highIndex >= lowIndex){
-        // make a middle of current range (low will move down if low, up if high)
-        // and same with high so the midpoint will always be the  low + (.5 total)
+        /* make a middle of current range (low will move down if low, up if high)
+        // and same with high so the midpoint will always be the  low + (.5 total) */
         int mid = (highIndex + lowIndex) /2;
         
         // return if found
