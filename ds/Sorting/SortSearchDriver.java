@@ -39,10 +39,9 @@ public class SortSearchDriver {
     System.out.println(ss.binarySearch(21));
     System.out.println("------------------bin2 test------------------");
     System.out.println(ss);
-    System.out.println(ss.binarySearchRecursive(0, 0, ss.size()-1));
-    System.out.println(ss.binarySearchRecursive(6, 0, ss.size()-1));
-    System.out.println(ss.binarySearchRecursive(21, 0, ss.size()-1));
-
+    System.out.println(ss.binarySearchRec(0));
+    System.out.println(ss.binarySearchRec(10));
+    System.out.println(ss.binarySearchRec(21));
 	      
 
   }

@@ -173,12 +173,12 @@ public class SortSearch{
 
     }
     
+
     /**
       Implement a RECURSIVE binary search as specified by the comments
        
       This algorithm only works on sorted ArrayLists.
     */
-
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
       
       // condition logic
@@ -188,7 +188,7 @@ public class SortSearch{
       if(highIndex >= lowIndex){
         // make a middle of current range (low will move down if low, up if high)
         // and same with high so the midpoint will always be the  low + (.5 total)
-        int mid = lowIndex + (highIndex - lowIndex) /2;
+        int mid = (highIndex + lowIndex) /2;
         
         // return if found
         if(data.get(mid) == value){ return mid; } // don't hate me for my 1 line conditions
@@ -212,7 +212,17 @@ public class SortSearch{
     public int size(){
       return data.size();
     }
-
+  
+    /**
+      @param {int} value - a value to be searched for on the AL
+      A helper function to make binarySearch2 calls less of a PITA for testing, calls out to 
+      binarySearchRecursive with the presets for the entire arrayList
+      @return {int} index of the value or -1
+    */
+    public int binarySearchRec(int value){
+      return binarySearchRecursive(value, 0, size()-1);
+    }
+  
     /** 
     @param {int} index - an index to be checked for being within the range of the LL
   
