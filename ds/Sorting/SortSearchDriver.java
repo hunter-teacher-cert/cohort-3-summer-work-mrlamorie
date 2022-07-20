@@ -30,25 +30,35 @@ public class SortSearchDriver {
     
 
     // search test cases
+    
     System.out.println("------------------lin test------------------");
     System.out.println(ss);
+    long startTime = System.nanoTime();
     System.out.println(ss.linearSearch(0));
     System.out.println(ss.linearSearch(10));
 	  System.out.println(ss.linearSearch(21));
+    long endTime = System.nanoTime();
+    System.out.println("Time to execute test series with lin:" + (endTime - startTime));
     System.out.println();
     
     System.out.println("------------------bin1 test------------------");
     System.out.println(ss);
+    startTime = System.nanoTime();
     System.out.println(ss.binarySearch(0));
     System.out.println(ss.binarySearch(10));
     System.out.println(ss.binarySearch(21));
+    endTime = System.nanoTime();
+    System.out.println("Time to execute test series with bin1:" + (endTime - startTime));
     System.out.println();
     
     System.out.println("------------------bin2 test------------------");
     System.out.println(ss);
+    startTime = System.nanoTime();
     System.out.println(ss.binarySearchRec(0));
     System.out.println(ss.binarySearchRec(10));
     System.out.println(ss.binarySearchRec(21));
+    endTime = System.nanoTime();
+    System.out.println("Time to execute test series with bin1:" + (endTime - startTime));
 	      
 
   }
