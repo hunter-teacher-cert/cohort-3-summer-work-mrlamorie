@@ -74,7 +74,7 @@ public class SortSearch{
 	    int smallIndex = start; // assume the item at start is the smallest.
       
       // search from start to the end of the array
-      for(int i = start; i < data.size(); i++){
+      for(int i = start; i < size(); i++){
         if(data.get(i) < data.get(smallIndex)){
           smallIndex = i; // if a new item is smaller then update smallIndex
         }
@@ -89,22 +89,22 @@ public class SortSearch{
     */
     public void sort(){
       // start at index 1, for each item in list
-      for(int i = 1; i < data.size(); i++){
+      for(int i = 1; i < size(); i++){
         
         int temp = data.get(i); // store in a temp
         int pos = i -1; // set to the index below moving number
 
         /* loop down though the array from temp to (including) 0 as long as temp is
-        // less than the current value data[pos] 
-        // could be done with a for & if as well */
+           less than the current value data[pos] 
+           could be done with a for & if as well */
         while((pos >= 0) && temp < data.get(pos)){
           data.set(pos + 1, data.get(pos));  // bump up the current value to index +1
           
           pos --; // bring the position down  (this can go to -1, fix below)
         }
         /* insert temp at last current index above pos (pos will go to -1)
-        // if the temp is the lowest value but that is okay, becuase we are putting
-        // the temp at the pos + 1. */
+           if the temp is the lowest value but that is okay, becuase we are putting
+           the temp at the pos + 1. */
         data.set(pos + 1, temp);
         
       }
@@ -129,12 +129,12 @@ public class SortSearch{
 
       int i = 0;  
       // I'm starting to like while loops more for loops with conditionals
-      while((i < data.size()) && (retVal == -1)){
+      while((i < size()) && (retVal == -1)){
         if(data.get(i) == value){ retVal = i; }
         i++;
       }
-      
-	    return retVal; // replace this return
+    
+	    return retVal; // base case, return -1
     }
     
     /**
@@ -149,7 +149,7 @@ public class SortSearch{
       
 	    // create assign variables  representing the high, low and middle indices 
       int low = 0;  // start of AL
-      int high = data.size() -1; // end of AL
+      int high = size() -1; // end of AL
       int mid = (low + high) /2; // init to middle of AL
       
 	    // while we're not done:
@@ -159,9 +159,9 @@ public class SortSearch{
           return mid;
         } else if (high <= low) {  // edge case - not found
           /* high can only equal low if item not in list or if the item is
-          // very last number searched. If it is the last number searched
-          // then the mid also == high == low and we checked the mid before
-          // this with a return, so this should never cause an issue */
+             very last number searched. If it is the last number searched
+             then the mid also == high == low and we checked the mid before
+             this with a return, so this should never cause an issue */
           return -1; // consistent with lin above
         } else if (data.get(mid) > value){ // too far right
           high = mid -1; // mid was wrong too so we can exclude it
@@ -182,12 +182,12 @@ public class SortSearch{
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
       
       /* condition logic
-      // we should search until found or not found. Found is mid value = val
-      // not found is high <= low or high < low? it's < because = could == mid
-      // so still searching case is high > low or high >= low */
+         we should search until found or not found. Found is mid value = val
+         not found is high <= low or high < low? it's < because = could == mid
+         so still searching case is high > low or high >= low */
       if(highIndex >= lowIndex){
         /* make a middle of current range (low will move down if low, up if high)
-        // and same with high so the midpoint will always be the  low + (.5 total) */
+           and same with high so the midpoint will always be the  low + (.5 total) */
         int mid = (highIndex + lowIndex) /2;
         
         // return if found
@@ -234,8 +234,8 @@ public class SortSearch{
         throw new IndexOutOfBoundsException("Negative indexing not supported.");
       }
   
-      if (index >= data.size()){ // out of bounds
-        throw new IndexOutOfBoundsException("Size: " + data.size() + " Index: " + index);
+      if (index >= size()){ // out of bounds
+        throw new IndexOutOfBoundsException("Size: " + size() + " Index: " + index);
       }
       return index;
     }
