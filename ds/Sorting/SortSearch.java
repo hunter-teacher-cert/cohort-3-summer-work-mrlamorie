@@ -225,10 +225,8 @@ public class SortSearch{
   
     /** 
     @param {int} index - an index to be checked for being within the range of the LL
-  
     This is a pass though function that generates an error if the index is out of 
     range for the LL
-  
     @return {int} the same index
     */
     private int indexCheck(int index){
