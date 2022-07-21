@@ -12,7 +12,7 @@ public class SortSearchDriver {
   	
   		
   	//Uncomment these to test part 2
-  
+    System.out.println("------------------fSI test------------------");    
   	int i;
   	i = ss.findSmallestIndex(0);
   	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss);
@@ -21,7 +21,7 @@ public class SortSearchDriver {
   	System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
   	
   	//Uncomment these to test part 3
-  
+    System.out.println("------------------sort test------------------");
   	System.out.println(ss);
   	ss.sort();
   	System.out.println(ss);
@@ -92,8 +92,9 @@ public class SortSearchDriver {
     test.sort();
     endTime = System.nanoTime();
     System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
-    
-    System.out.println("------------------speed test - 50k  0, Mid, NF total------------------");   
+
+    System.out.println("50k, 100k, 500k, 1m, 5m search testing 0, mid, size");
+    System.out.println("------------------speed test - 50k------------------");   
     int mid = size / 2;
     startTime = System.nanoTime();
     test.linearSearch(0);
