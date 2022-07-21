@@ -52,11 +52,25 @@ public class SortSearch{
 	    }
     }
 
+    /* new constructor for making ordered list for testing */
+    public SortSearch(int size, String o){
+      data = new ArrayList<Integer>();
+      for (int i= 0; i < size; i++){
+        data.add(i);
+      }
+    }
+
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
 	    return this.data.get(index);
     }
-    
+
+    /* 
+      @param {int} value - a value to be added to the data set
+    */
+    public void add(int value){
+      data.add(value);
+    }
 
 
     /*

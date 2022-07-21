@@ -67,7 +67,170 @@ public class SortSearchDriver {
     System.out.println(ss.binarySearchRec(21));
     endTime = System.nanoTime();
     System.out.println("Time to execute test series with bin2: " + ((endTime - startTime)/1000) + "ms");
-	      
 
+
+    /** long run test cases **/
+
+    System.out.println("------------------speed test - sort------------------");
+    int size = 1000;
+    SortSearch test = new SortSearch(size);
+    startTime = System.nanoTime();
+    test.sort();
+    endTime = System.nanoTime();
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    
+    size = 10000;
+    test = new SortSearch(size);
+    startTime = System.nanoTime();
+    test.sort();
+    endTime = System.nanoTime();
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+
+    size = 50000;
+    test = new SortSearch(size);
+    startTime = System.nanoTime();
+    test.sort();
+    endTime = System.nanoTime();
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    
+    System.out.println("------------------speed test - 50k  0, Mid, NF total------------------");   
+    int mid = size / 2;
+    startTime = System.nanoTime();
+    test.linearSearch(0);
+    test.linearSearch(mid);
+    test.linearSearch(test.size());
+    endTime = System.nanoTime();
+    System.out.print("Linear search: ");
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearch(0);
+    test.binarySearch(mid);
+    test.binarySearch(test.size());
+    endTime = System.nanoTime();    
+    System.out.print("Binary search: ");    
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms"); 
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearchRec(0);
+    test.binarySearchRec(mid);
+    test.binarySearchRec(test.size());
+    endTime = System.nanoTime(); 
+    System.out.print("Binary search recusive: ");        
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    
+    System.out.println("------------------speed test - 100k------------------");   
+    size = 100000;
+    test = new SortSearch(size, "V");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.linearSearch(0);
+    test.linearSearch(mid);
+    test.linearSearch(test.size());
+    endTime = System.nanoTime();
+    System.out.print("Linear search: ");
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearch(0);
+    test.binarySearch(mid);
+    test.binarySearch(test.size());
+    endTime = System.nanoTime();    
+    System.out.print("Binary search: ");    
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms"); 
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearchRec(0);
+    test.binarySearchRec(mid);
+    test.binarySearchRec(test.size());
+    endTime = System.nanoTime(); 
+    System.out.print("Binary search recusive: ");        
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    
+    System.out.println("------------------speed test - 500k------------------");   
+    size = 500000;
+    test = new SortSearch(size, "V");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.linearSearch(0);
+    test.linearSearch(mid);
+    test.linearSearch(test.size());
+    endTime = System.nanoTime();
+    System.out.print("Linear search: ");
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearch(0);
+    test.binarySearch(mid);
+    test.binarySearch(test.size());
+    endTime = System.nanoTime();    
+    System.out.print("Binary search: ");    
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms"); 
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearchRec(0);
+    test.binarySearchRec(mid);
+    test.binarySearchRec(test.size());
+    endTime = System.nanoTime(); 
+    System.out.print("Binary search recusive: ");        
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+
+    System.out.println("------------------speed test - 1M------------------");
+    size = 1000000;
+    test = new SortSearch(size, "V");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.linearSearch(0);
+    test.linearSearch(mid);
+    test.linearSearch(test.size());
+    endTime = System.nanoTime();
+    System.out.print("Linear search: ");
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearch(0);
+    test.binarySearch(mid);
+    test.binarySearch(test.size());
+    endTime = System.nanoTime();    
+    System.out.print("Binary search: ");    
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms"); 
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearchRec(0);
+    test.binarySearchRec(mid);
+    test.binarySearchRec(test.size());
+    endTime = System.nanoTime(); 
+    System.out.print("Binary search recusive: ");        
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+
+    System.out.println("------------------speed test - 5M------------------");
+    size = 5000000;
+    test = new SortSearch(size, "V");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.linearSearch(0);
+    test.linearSearch(mid);
+    test.linearSearch(test.size());
+    endTime = System.nanoTime();
+    System.out.print("Linear search: ");
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearch(0);
+    test.binarySearch(mid);
+    test.binarySearch(test.size());
+    endTime = System.nanoTime();    
+    System.out.print("Binary search: ");    
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms"); 
+    mid = size / 2;
+    startTime = System.nanoTime();
+    test.binarySearchRec(0);
+    test.binarySearchRec(mid);
+    test.binarySearchRec(test.size());
+    endTime = System.nanoTime(); 
+    System.out.print("Binary search recusive: ");        
+    System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
+
+    
   }
 }
