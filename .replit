@@ -1,4 +1,4 @@
-language = "java10"
+language = "java"
 run = "cd ds/Sorting; javac *java; java SortSearchDriver"
 
 #"cd ds/Pointers; javac Driver.java Node.java; java Driver"

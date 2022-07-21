@@ -52,7 +52,7 @@ public class SortSearch{
 	    }
     }
 
-  /* Convenience function to get data out of the ArrayList from the driver */
+    /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
 	    return this.data.get(index);
     }
