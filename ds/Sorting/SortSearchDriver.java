@@ -232,6 +232,21 @@ public class SortSearchDriver {
     System.out.print("Binary search recusive: ");        
     System.out.println("Time to execute test with of size " + size + ": " + ((endTime - startTime)/1000) + " ms");
 
+    System.out.println("------------------Merge Test------------------");
+    ArrayList<Integer> a= ss.buildIncreasingList(20);
+    ArrayList<Integer> b= ss.buildIncreasingList(20);
+    System.out.print("A: ");
+	  System.out.println(a);
+    System.out.print("B: ");
+    System.out.println(b);
+    ArrayList<Integer> c = ss.merge(a, b);
+    System.out.print("Merged: ");    
+    System.out.println(c);
+    System.out.println("------------------MergeSort Test------------------");
+    ss = new SortSearch(20);
+    System.out.println("Raw:" + ss);
+    ss.mS();
+    System.out.println("MS:" + ss);
     
   }
 }

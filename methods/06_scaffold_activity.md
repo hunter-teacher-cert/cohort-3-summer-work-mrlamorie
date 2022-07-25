@@ -3,6 +3,7 @@
 Roster: William LaMorie, Stacy Goldstein
 
 # Nested Loops 
+* runnable code [06_scaffold_activity.java](https://replit.com/@mrlamorie/cohort-3-summer-work-mrlamorie#methods/06_scaffold_activity.java)
 
 ```java
 public class Loops{

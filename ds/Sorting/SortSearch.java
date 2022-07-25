@@ -263,7 +263,95 @@ public class SortSearch{
     public void builtinSort(){
 	    Collections.sort(data);
     }
-    
 
-    
+    /* Merge Sort Stuff after here */
+    /**
+       Builds and returns an ArrayList that's already in increasing order.
+       You can use this method to test your merge method.
+    */
+    public ArrayList<Integer> buildIncreasingList(int size){
+	    ArrayList<Integer>  newlist = new ArrayList<Integer>();
+	    Random r = new Random();
+	    int nextval = r.nextInt(20)+1;
+	    for (int i=0;i<size;i++){
+	      newlist.add(nextval);
+	      nextval = nextval + r.nextInt(20);
+	    }
+	    return newlist;
+	  }
+
+    /**
+       this routine should create and return a new ArrayList of
+       integers and fill it by merging list1 and list2 into the new
+       list.
+       list1 and list2 are already sorted in increasing order.
+       Example:
+       If list1 contains [1,5,17,25]
+       and list2 contains [3,6,10,30,40,50]
+       The new list will contain:
+       [1, 3, 5, 6, 10, 17, 25, 30, 40, 50]
+
+    */
+    public ArrayList<Integer> merge(ArrayList<Integer> list1, ArrayList<Integer> list2){
+      // make a new AL
+      ArrayList<Integer> retlist = new ArrayList<Integer>();
+      
+      //  check the first item of each aginst eachother while the both have members
+      while(list1.size() > 0 && list2.size() > 0){
+         // pop off the smaller of the two to the new al
+        if(list1.get(0) < list2.get(0)){
+          retlist.add(list1.get(0));
+          list1.remove(0);
+        } else {
+          retlist.add(list2.get(0));
+          list2.remove(0);        
+        }
+      }
+
+      // add any reaminders
+      if(list1.size() > 0){
+        for(int i = 0; i < list1.size(); i++){
+          retlist.add(list1.get(i));
+        }
+      }
+      if(list2.size() > 0){
+        for(int i = 0; i < list2.size(); i++){
+          retlist.add(list2.get(i));
+        }     
+      }
+       
+      // if either list still has elements and the other does not, dump those on to the
+      // retrun list
+
+      return retlist;
+    }
+
+    public void mergeSort(ArrayList<Integer> list){
+
+      if(list.size() > 1){
+        ArrayList<Integer> low = new ArrayList<Integer>();
+        ArrayList<Integer> high = new ArrayList<Integer>();
+  
+      
+        
+        for(int i = 0; i < list.size(); i ++){
+          if(i <= list.size() /2){
+            low.add(i);
+          } else {
+            high.add(i);
+          }
+        }
+
+        mergeSort(low);
+        mergeSort(high);
+        merge(low, high);
+      }
+    }
+    return;
+
+    public void mS(){
+      mergeSort(data);
+    }
+
+
 }
