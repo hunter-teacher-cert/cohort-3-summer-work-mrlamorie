@@ -3,30 +3,50 @@ Methods Summer 2022
 GALLERY TOUR LOG
 
 
-USAGE OF TOP SECTION: 
-* Fill in discoveries etc section as you go, or after your is complete.
-* Replicate the 
-* Delete these instructions once read.
+
 ====================================================
 DISCOVERIES:
-* any cool tips/tricks/hacks you learned
-* 1 per line, please
+* found out the actual names of our courses without having to look them up on CUNY
+* archatect (sp?) template is really nice formating
+* realized we should put our names on theses
+* some of the themes work really well with graphics
+* some emoticons will work and display correctly.
+* looks like animated gif imports will only load the first image
+* less is more. a site with a minimal amount of stuff, say in a table, can be very informative at a quick glance
+* some of the MD pages look just as good as some of the HTML & CSS pages
 
 
 LINGERING QUESTIONS:
-* 1 per line, please
-
+* Should the instructions for making these sites have included a prompt to have your name on them, and to describe something about what you highlight
 
 COMMENTS/CONCERNS/OTHER:
-* 1 per line, please
+* Can not easily tell who's is who's in many cases
+* Should we have a prompt to list collaborators on things and links to their repos?
+* Some of the themes may come out with unclear divsions between the sections and the content.
+* Code samples that seem small on a plain MD page may look really big and take up lots of space with a theme added.
+
 ====================================================
 
 
-USAGE OF BOTTOM SECTION: 
-* For any site you deem notable, add an entry using the format below
+
 ====================================================
-notable site:
-URL
-notable aspect:
-what is cool about this site
+notable site: Yenmin Young's site
+https://yenminyoung.github.io/nycscertweb/
+notable aspect: 
+Well formated using the one of the built in formats to highlight work, nice blend of links and images.
+-------------------------------------
+notable site: Yeidy Levels' site
+https://ylevels.github.io/nycscertweb/
+notable aspect: 
+great use of outside graphics with a built in theme
+-------------------------------------
+notable site: Marieke Thomas' site
+https://marieke-thomas.github.io/nycscertweb/
+notable aspect: 
+Well paced, nice use of CGOL image above the fold to draw in people
+-------------------------------------
+notable site: Marisa Shuman's site
+https://mshuman8.github.io/nycscertweb/
+notable aspect: 
+The alvacado!!!!
 -------------------------------------
