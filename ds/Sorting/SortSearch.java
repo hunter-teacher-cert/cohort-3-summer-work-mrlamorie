@@ -326,30 +326,7 @@ public class SortSearch{
       return retlist;
     }
 
-    // public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
-    //   ArrayList<Integer> low = new ArrayList<Integer>();
-    //   ArrayList<Integer> high = new ArrayList<Integer>();
-      
-    //     for(int i = 0; i < list.size(); i ++){
-    //       if(i <= list.size() /2){
-    //         low.add(i);
-    //       } else {
-    //         high.add(i);
-    //       }
-    //     }
-      
-    //   if(list.size() > 1){
 
-    //     return mergeSort(low);
-    //     return mergeSort(high);
-        
-    //   }
-    // }
-    // return merge(low, high);
-
-    // public void mS(){
-    //   return mergeSort(data);
-    // }
     public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
 
       // check for base case
@@ -364,15 +341,15 @@ public class SortSearch{
         int size = list.size();
         for(int i = 0; i < size; i ++){
            if(i < size /2){
-             low.add(i);
+             low.add(list.get(i));
            } else {
-             high.add(i);
+             high.add(list.get(i));
            }
         }
         // meregSort the left half
-        mergeSort(low);
+        low = mergeSort(low);
         // mergeSort the right half
-        mergeSort(high);
+        high = mergeSort(high);
         // merge them together into a new list
         return merge(low, high);
         // return that new list 
