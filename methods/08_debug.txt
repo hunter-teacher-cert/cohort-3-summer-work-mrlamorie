@@ -1,0 +1,36 @@
+08_Debugging Activity
+
+Group Name: Error on Line 10
+
+Group Members: Marisa Shuman, Yeidy Levels, Wayne Tobias, Will LaMorie
+
+Activity: Students are given a block of code that has ONE error in it. 
+Students are familiar with the concepts that are present in the code but not how to find the error. 
+
+Students will add a comment to each line of code where they explain what that line is doing (what it means in non code words). 
+
+Students will identify the error in the code and indicate a correction.
+
+for (int i=0; i>data.length; i++) {
+
+  if (data[i]%2 == 0) {
+    System.out.print(data[i] + " is even");
+  }
+
+  else {
+    System.out.print(data[i] + " is odd");
+  }
+
+}
+
+
+Scaffolding: 
+- Other types of errors that could be included are:
+    * double vs single equal signs
+    * , instead of ; in for loops
+    * switch the print statements so even/odd are swapped
+    * add () after the .length in the for loop
+    * use .size() instead of .length
+
+Extension: 
+- Ask the students "Where do you think another student might make an error?"

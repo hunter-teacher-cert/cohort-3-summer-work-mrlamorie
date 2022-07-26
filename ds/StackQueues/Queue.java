@@ -1,4 +1,6 @@
 /** Queue
+Use an arrayList because it has an add method attached to it, which is generally the same thing
+as the enqueue fxn of the queue, so the build over will be small.
 
 Recall, a queue is a First In First Out structure.
 
@@ -14,11 +16,11 @@ You should implement the following methods
   */
 public class Queue{
 
-    // Place private instance variables here
+  /* ------ Instance Variables ------ */
 
-    // Place constructors here
+  /* ------ Constructors ------ */
 
-    // Place methods here
+  /* ------ Methods ------ */
     
 
 }
