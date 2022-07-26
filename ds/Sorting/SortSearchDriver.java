@@ -245,7 +245,7 @@ public class SortSearchDriver {
     System.out.println("------------------MergeSort Test------------------");
     ss = new SortSearch(20);
     System.out.println("Raw:" + ss);
-    ss.mS();
+    ss.msort();
     System.out.println("MS:" + ss);
     
   }

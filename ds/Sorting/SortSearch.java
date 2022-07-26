@@ -326,31 +326,62 @@ public class SortSearch{
       return retlist;
     }
 
-    public void mergeSort(ArrayList<Integer> list){
-
-      if(list.size() > 1){
-        ArrayList<Integer> low = new ArrayList<Integer>();
-        ArrayList<Integer> high = new ArrayList<Integer>();
-  
+    // public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
+    //   ArrayList<Integer> low = new ArrayList<Integer>();
+    //   ArrayList<Integer> high = new ArrayList<Integer>();
       
-        
-        for(int i = 0; i < list.size(); i ++){
-          if(i <= list.size() /2){
-            low.add(i);
-          } else {
-            high.add(i);
-          }
-        }
+    //     for(int i = 0; i < list.size(); i ++){
+    //       if(i <= list.size() /2){
+    //         low.add(i);
+    //       } else {
+    //         high.add(i);
+    //       }
+    //     }
+      
+    //   if(list.size() > 1){
 
+    //     return mergeSort(low);
+    //     return mergeSort(high);
+        
+    //   }
+    // }
+    // return merge(low, high);
+
+    // public void mS(){
+    //   return mergeSort(data);
+    // }
+    public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
+
+      // check for base case
+      if(list.size() < 2){
+        return list;
+      }
+      else{
+        // if not the base case
+        // split in two lists
+        ArrayList<Integer> low = new ArrayList<Integer>();
+        ArrayList<Integer> high = new ArrayList<Integer>(); 
+        int size = list.size();
+        for(int i = 0; i < size; i ++){
+           if(i < size /2){
+             low.add(i);
+           } else {
+             high.add(i);
+           }
+        }
+        // meregSort the left half
         mergeSort(low);
+        // mergeSort the right half
         mergeSort(high);
-        merge(low, high);
+        // merge them together into a new list
+        return merge(low, high);
+        // return that new list 
       }
     }
-    return;
 
-    public void mS(){
-      mergeSort(data);
+
+    public void msort(){
+      data =  mergeSort(data);
     }
 
 
