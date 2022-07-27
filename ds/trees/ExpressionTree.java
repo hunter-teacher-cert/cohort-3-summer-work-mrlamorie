@@ -18,7 +18,7 @@ public class ExpressionTree{
     right =r;
   }
 
-  //You must write this method:
+
   //Calculate the value of the entire tree
   public double evaluate(){
     if(isValue()) {
@@ -27,15 +27,7 @@ public class ExpressionTree{
     return apply(left.evaluate(), right.evaluate(), operator);
   }
 
-  //You must write this method:
-  //Return a string representation of the tree
-  //A value is just hte string of the value
-  //An operation has parenthesis around
-  //such as
-  //"12.5"  //just a value
-  //"(5.0-8.0)" //a tree with 2 value children
-  //"(12.5*(5.0-8.0)) //a tree that is the product of the previous two example trees
-  //"(((2.0+1.0)/(8.0*0.43)) - 1.0)" //a tree with more
+  // return the toString()
   public String toString(){
     // if isValue()
     // return "" + value
@@ -73,6 +65,7 @@ public class ExpressionTree{
    }
   }
 
+  // alternate toString()
   public String toStringPrefix(){
     // if isValue()
     // return "" + value
