@@ -58,7 +58,7 @@ public class TreeDriver{
 
 
     //3. Multi level trees which need to be evaluated:
-    /**
+    
     ExpressionTree e = new ExpressionTree('/',c,two);
     ExpressionTree f = new ExpressionTree('-',c,ten);
     ExpressionTree g = new ExpressionTree('+',b,c);
@@ -70,7 +70,7 @@ public class TreeDriver{
     System.out.println(g.toString() + " is equal to " + g.evaluate());
     System.out.println(h.toString() + " is equal to " + h.evaluate());
     System.out.println(i.toString() + " is equal to " + i.evaluate());
-    */
+    
     /** output:
     ((3.0*4.0)/2.0) is equal to 6.0
     ((3.0*4.0)-10.0) is equal to 2.0
