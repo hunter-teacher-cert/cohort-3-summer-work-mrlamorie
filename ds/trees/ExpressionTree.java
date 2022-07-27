@@ -80,7 +80,7 @@ public class ExpressionTree{
       return "" + value;
     }
     // else
-    // return "(" + left + op + right + ")"
+    // return prefix notation
     return "(" + operator + " " + left.toStringPrefix() + " " + right.toStringPrefix() + ")";    
   }
 
