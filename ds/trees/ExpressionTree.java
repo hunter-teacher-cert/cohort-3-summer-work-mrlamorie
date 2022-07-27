@@ -24,7 +24,7 @@ public class ExpressionTree{
     if(isValue()) {
       return value;
     }
-    return -1.0;
+    return apply(left.evaluate(), right.evaluate(), operator);
   }
 
   //You must write this method:
