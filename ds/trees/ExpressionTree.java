@@ -21,7 +21,10 @@ public class ExpressionTree{
   //You must write this method:
   //Calculate the value of the entire tree
   public double evaluate(){
-    return 10000000000000.0;//replace this
+    if(isValue()) {
+      return value;
+    }
+    return -1.0;
   }
 
   //You must write this method:
