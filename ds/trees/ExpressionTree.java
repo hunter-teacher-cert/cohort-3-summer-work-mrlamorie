@@ -36,10 +36,13 @@ public class ExpressionTree{
   public String toString(){
     // if isValue()
     // return "" + value
-
+    if(isValue()){
+      return "" + value;
+    }
     // else
     // return "(" + left + op + right + ")"
-    return "replace this with your code";
+    return "(" + left + " " + operator + " " + right + ")";
+    
   }
   
   //Return true when the node is a value, false when it is an operator
