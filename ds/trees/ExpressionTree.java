@@ -71,7 +71,17 @@ public class ExpressionTree{
    }else{ //  if(op == '/'){ //or any invalid operators
     return a/b;
    }
+  }
 
+  public String toStringPrefix(){
+    // if isValue()
+    // return "" + value
+    if(isValue()){
+      return "" + value;
+    }
+    // else
+    // return "(" + left + op + right + ")"
+    return "(" + operator + " " + left.toStringPrefix() + " " + right.toStringPrefix() + ")";    
   }
 
  }

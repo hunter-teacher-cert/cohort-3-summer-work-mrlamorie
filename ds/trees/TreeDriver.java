@@ -70,7 +70,12 @@ public class TreeDriver{
     System.out.println(g.toString() + " is equal to " + g.evaluate());
     System.out.println(h.toString() + " is equal to " + h.evaluate());
     System.out.println(i.toString() + " is equal to " + i.evaluate());
-    
+
+    System.out.println(e.toStringPrefix() + " is equal to " + e.evaluate());
+    System.out.println(f.toStringPrefix() + " is equal to " + f.evaluate());
+    System.out.println(g.toStringPrefix() + " is equal to " + g.evaluate());
+    System.out.println(h.toStringPrefix() + " is equal to " + h.evaluate());
+    System.out.println(i.toStringPrefix() + " is equal to " + i.evaluate());
     /** output:
     ((3.0*4.0)/2.0) is equal to 6.0
     ((3.0*4.0)-10.0) is equal to 2.0
