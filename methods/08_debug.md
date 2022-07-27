@@ -29,14 +29,14 @@ for (int i=0; i>data.length; i++) {
 
 **Scaffolding Variations**: 
 - Other types of errors that could be included are:
-    * double vs single equal signs
-    * `,` instead of `;` in for loops
+    * `==` vs `=` equal useage or other equality evaluation errors
+    * `,` instead of `;` in `for()` loop
     * switch the print statements so even/odd are swapped
-    * add `()` after the `.length` in the `for` loop
-    * use `.size()` instead of .length
+    * add `()` after the `.length` in the `for()` loop
+    * use `.size()` instead of `.length`
 
 **Extension**: 
-- Ask the students "Where do you think another student might make an error?".
+- Ask the students "*Where do you think another student might make an error?*".
 - Have the students build a function from scratch without testing, and pass off to other students to have them look for bugs ala *paired coding* or *rubbyducky coding*.
 - A recusive method where recursion is though reassigment of a variable, but the variable value is not updated. Eg:
     ````java
