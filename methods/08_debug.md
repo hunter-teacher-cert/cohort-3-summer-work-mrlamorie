@@ -11,6 +11,7 @@ Students will add a comment to each line of code where they explain what that li
 
 Students will identify the error in the code and indicate a correction.
 
+````java
 for (int i=0; i>data.length; i++) {
 
   if (data[i]%2 == 0) {
@@ -22,7 +23,7 @@ for (int i=0; i>data.length; i++) {
   }
 
 }
-
+````
 
 Scaffolding: 
 - Other types of errors that could be included are:
@@ -34,3 +35,9 @@ Scaffolding:
 
 Extension: 
 - Ask the students "Where do you think another student might make an error?"
+- have the students build a function from scratch without testing, and pass off to other students to have them look for bugs
+- a recusive method where recursion is though reassigment of a variable, but the varriable value is not updated. Eg:
+    ````java
+      doSomethingRecursive(foo) //should be foo = doSomethingRecursive(foo)
+    ````
+- a section of code with an inordiant number of extra vars for extra steps, where there are incorrect results because the wrong vars are used in the wrong places
