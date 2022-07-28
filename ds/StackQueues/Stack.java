@@ -61,8 +61,12 @@ public class Stack{
     return size;
   }
 
-  boolean isEmpty(){
+  public boolean isEmpty(){
     return (size == 0);
+  }
+
+  public String toString(){
+    return list.toString();
   }
 
 }
