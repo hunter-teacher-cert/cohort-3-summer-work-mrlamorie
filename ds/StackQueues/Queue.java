@@ -62,8 +62,12 @@ public class Queue{
     return size;
   }
 
-  boolean isEmpty(){
+  public boolean isEmpty(){
     return (size == 0);
+  }
+
+  public String toString(){
+    return list.toString();
   }
 
 }
