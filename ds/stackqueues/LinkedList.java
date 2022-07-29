@@ -4,7 +4,7 @@ import java.util.*;
 /**
 LinkedList.java
 Owner: William LaMorie  
-Collaborators: Théa W, Maxwell Y, Jerusha T
+Collaborators: Kate M , Maxwell Y, Jerusha T
 **/
 
 /**
